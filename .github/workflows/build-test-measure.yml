@@ -1,0 +1,108 @@
+name: Build, test & measure
+
+on:
+  workflow_call:
+  push:
+    branches:
+      - develop
+      # Include all release branches.
+      - '[0-9]+.[0-9]+'
+  pull_request:
+    # Run workflow whenever a PR is opened, updated (synchronized), or marked ready for review.
+    types: [opened, synchronize, ready_for_review]
+
+jobs:
+  pre-run:
+    name: 'Pre run'
+    runs-on: ubuntu-latest
+    outputs:
+      changed-file-count: ${{ steps.determine-file-counts.outputs.count }}
+      changed-php-count: ${{ steps.determine-file-counts.outputs.php-count }}
+      changed-js-count: ${{ steps.determine-file-counts.outputs.js-count }}
+    steps:
+      - name: Checkout including last 2 commits
+        # Fetch last 2 commits if it's not a PR, so that we can determine the list of modified files.
+        if: ${{ github.base_ref == null }}
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Checkout
+        # Do usual checkout if it's a PR.
+        if: ${{ github.base_ref != null }}
+        uses: actions/checkout@v3
+
+      - name: Fetch base branch
+        # Only fetch base ref if it's a PR.
+        if: ${{ github.base_ref != null }}
+        run: git fetch --depth=1 --no-tags origin ${{ github.base_ref }}
+
+      - name: Determine modified files for PR
+        if: ${{ github.base_ref != null }}
+        run: echo "MODIFIED_FILES=$(git diff --name-only FETCH_HEAD HEAD | base64 -w 0)" >> $GITHUB_ENV
+
+      - name: Determine modified files for commit
+        if: ${{ github.base_ref == null }}
+        run: echo "MODIFIED_FILES=$(git diff --name-only HEAD~1 HEAD | base64 -w 0)" >> $GITHUB_ENV
+
+      - id: determine-file-counts
+        name: Determine if modified files should make the workflow run continue
+        run: |
+          MODIFIED_FILES=$(echo "$MODIFIED_FILES" | base64 -d)
+          echo -e "Modified files:\n$MODIFIED_FILES\n"
+
+          FILE_COUNT=$(php -f bin/determine-modified-files-count.php "$IGNORE_PATH_REGEX" "$MODIFIED_FILES" --invert)
+          PHP_FILE_COUNT=$(php -f bin/determine-modified-files-count.php ".+\.php|composer\.(json|lock)|phpstan\.neon\.dist|phpunit\.xml" "$MODIFIED_FILES")
+          JS_FILE_COUNT=$(php -f bin/determine-modified-files-count.php ".+\.(js|snap)|package\.(json|lock)" "$MODIFIED_FILES")
+
+          echo "Changed file count: $FILE_COUNT"
+          echo "Changed PHP file count: $PHP_FILE_COUNT"
+          echo "Changed JS file count: $JS_FILE_COUNT"
+
+          echo "count=$FILE_COUNT" >> $GITHUB_OUTPUT
+          echo "php-count=$PHP_FILE_COUNT" >> $GITHUB_OUTPUT
+          echo "js-count=$JS_FILE_COUNT" >> $GITHUB_OUTPUT
+        env:
+          # Ignore Paths:
+          # - .github/
+          # - !.github/workflows
+          # - .wordpress-org/
+          IGNORE_PATH_REGEX: \.github\/(?!workflows)|\.wordpress-org\/
+
+  #-----------------------------------------------------------------------------------------------------------------------
+
+  static-analysis-php:
+    name: 'Static Analysis: PHP'
+    runs-on: ubuntu-latest
+    needs: pre-run
+    if: needs.pre-run.outputs.changed-php-count > 0
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          # phpstan requires PHP 7.1+.
+          php-version: '8.0'
+          extensions: dom, iconv, json, libxml, zip
+
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: Configure Composer cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Install Composer dependencies
+        run: composer install
+
+      - name: Static Analysis (PHPStan)
+        run: |
+          vendor/bin/phpstan --version
+          vendor/bin/phpstan
