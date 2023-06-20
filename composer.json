@@ -1,5 +1,5 @@
 {
-	"name": "figuren-theater/project_urlname",
+	"name": "figuren-theater/code-quality",
 	"description": "... like the figuren.theater WordPress Multisite network.",
     "homepage": "https://websites.fuer.figuren.theater",
     "type": "wordpress-muplugin",
@@ -19,8 +19,8 @@
     ],
     "support": {
         "email": "info@figuren.theater",
-        "issues": "https://github.com/figuren-theater/project_urlname/issues",
-        "source": "https://github.com/figuren-theater/project_urlname"
+        "issues": "https://github.com/figuren-theater/code-quality/issues",
+        "source": "https://github.com/figuren-theater/code-quality"
     },
 	"autoload": {
 		"files": [

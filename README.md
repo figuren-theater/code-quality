@@ -1,11 +1,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/figuren-theater/project_urlname">
+  <a href="https://github.com/figuren-theater/code-quality">
     <img src="https://raw.githubusercontent.com/figuren-theater/logos/main/favicon.png" alt="figuren.theater Logo" width="100" height="100">
   </a>
 
-  <h1 align="center">figuren.theater | project_name</h1>
+  <h1 align="center">figuren.theater | code_quality</h1>
 
   <p align="center">
     ... like the WordPress Multisite network for puppeteers - <a href="https://figuren.theater">figuren.theater</a>.
@@ -40,14 +40,14 @@ This is the long desc
 "repositories": [
     {
         "type": "git",
-        "url": "https://github.com/figuren-theater/project_urlname"
+        "url": "https://github.com/figuren-theater/code-quality"
     }
 ]
 ```
 
 2. Install via command line
 ```sh
-composer require figuren-theater/project_urlname
+composer require figuren-theater/code-quality
 ```
 
 ## Usage
