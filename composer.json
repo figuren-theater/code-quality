@@ -1,6 +1,6 @@
 {
 	"name": "figuren-theater/code-quality",
-	"description": "... like the figuren.theater WordPress Multisite network.",
+	"description": "Development tools to measure and test the code quality of figuren.theater, the WordPress Multisite network for puppeteers.",
     "homepage": "https://websites.fuer.figuren.theater",
     "type": "wordpress-muplugin",
     "keywords": ["wordpress", "wordpress-muplugin"],
