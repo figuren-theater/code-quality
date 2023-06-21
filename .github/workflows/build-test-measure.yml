@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: figuren-theater/code-quality
-          ref: refs/heads/master
+          ref: refs/heads/main
           path: code-quality
 
       - name: Checkout including last 2 commits
