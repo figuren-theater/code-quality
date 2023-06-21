@@ -2,6 +2,7 @@ name: Build, test & measure
 
 on:
   workflow_call:
+  # dorny/paths-filter requires this action to run only on 'push' or 'pull_request' events 
 
 jobs:
   pre-run:
@@ -11,7 +12,7 @@ jobs:
       changed-php: ${{ steps.filter.outputs.php }}
       changed-js: ${{ steps.filter.outputs.js }}
     steps:
-      
+      - uses: actions/checkout@v2
       # Checks to see if any files in the PR match one of the listed file types.
       # We can use this filter to decide whether or not to run linters or tests.
       # You can check if a file with a listed file type is in the PR by doing:
