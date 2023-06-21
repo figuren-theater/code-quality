@@ -36,29 +36,35 @@ This is the long desc
 ## Install
 
 1. Add this repository to your `composer.json`
-```json
-"repositories": [
-    {
-        "type": "git",
-        "url": "https://github.com/figuren-theater/code-quality"
-    }
-]
-```
+    ```json
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/figuren-theater/code-quality"
+        }
+    ]
+    ```
 
 2. Install via command line
-```sh
-composer require figuren-theater/code-quality
-```
+    ```sh
+    composer require -dev figuren-theater/code-quality
+    ```
+3. Create a [phpstan.neon](https://github.com/figuren-theater/new-ft-module/blob/main/phpstan.neon) file in the root of the repository
+
+4. Enable the **Build, test & measure** workflow as required status check for the repo in *[Org >> Settings >> Actions](https://github.com/organizations/figuren-theater/settings/actions)* under **Required workflows** 
+(This step is needed until all repos require this status check by default.) 
 
 ## Usage
 
-
+|Repo|Code Quality|
+|---|---|
+|[ft-core](https://github.com/figuren-theater/ft-core/)| [![Build, test & measure](https://github.com/figuren-theater/ft-core/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-core/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml) |
 
 
 ## Built with & uses
 
   - [dependabot](/.github/dependabot.yml)
-  - ....
+  - [phpstan-wordpress](https://github.com/szepeviktor/phpstan-wordpress)
 
 ## Contributing
 
@@ -93,6 +99,7 @@ details
 
 ## Acknowledgments
 
+  - [@szepeviktor](https://github.com/szepeviktor) for all wonderful sharings over the last years especially
   - [altis](https://github.com/search?q=org%3Ahumanmade+altis) by humanmade, as our digital role model and inspiration
   - [@roborourke](https://github.com/roborourke) for his clear & understandable [coding guidelines](https://docs.altis-dxp.com/guides/code-review/standards/)
   - [python-project-template](https://github.com/rochacbruno/python-project-template) for their nice template->repo renaming workflow
