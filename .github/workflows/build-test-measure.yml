@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       changed-php: ${{ steps.filter.outputs.php }}
+      changed-php_files: ${{ steps.filter.outputs.php_files }}
       changed-js: ${{ steps.filter.outputs.js }}
     steps:
       - uses: actions/checkout@v3
@@ -24,19 +25,27 @@ jobs:
       - uses: dorny/paths-filter@v2.2.1
         id: filter
         with:
+          # Enable listing of files matching each filter.
+          # Paths to files will be available in `${FILTER_NAME}_files` output variable.
+          # Paths will be escaped and space-delimited.
+          # Output is usable as command line argument list in linux shell
+          list-files: shell
+          
+          # It doesn't make sense to lint deleted files.
+          # Therefore we specify we are only interested in added or modified files.
           filters: |
             md:
-              - '**/*.md'
+              - added|modified: '**/*.md'
             js:
-              - '**/*.js'
+              - added|modified: '**/*.js'
             json:
-              - '**/*.json'
+              - added|modified: '**/*.json'
             yml:
-              - '**/*.yml'
+              - added|modified: '**/*.yml'
             scss:
-              - '**/*.scss'
+              - added|modified: '**/*.scss'
             php:
-              - '**/*.php'
+              - added|modified: '**/*.php'
 
   #-----------------------------------------------------------------------------------------------------------------------
 
@@ -74,4 +83,4 @@ jobs:
       - name: Static Analysis (PHPStan)
         run: |
           vendor/bin/phpstan --version
-          vendor/bin/phpstan
+          vendor/bin/phpstan ${{ needs.pre-run.outputs.changed-php_files }}
