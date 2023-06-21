@@ -83,4 +83,4 @@ jobs:
       - name: Static Analysis (PHPStan)
         run: |
           vendor/bin/phpstan --version
-          vendor/bin/phpstan ${{ needs.pre-run.outputs.changed-php_files }}
+          vendor/bin/phpstan analyse -nvv ${{ needs.pre-run.outputs.changed-php_files }}
