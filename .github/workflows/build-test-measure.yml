@@ -8,65 +8,32 @@ jobs:
     name: 'Pre run'
     runs-on: ubuntu-latest
     outputs:
-      changed-file-count: ${{ steps.determine-file-counts.outputs.count }}
-      changed-php-count: ${{ steps.determine-file-counts.outputs.php-count }}
-      changed-js-count: ${{ steps.determine-file-counts.outputs.js-count }}
+      changed-php: ${{ steps.filter.outputs.php }}
+      changed-js: ${{ steps.filter.outputs.js }}
     steps:
-      - name: Checkout reusable workflow dir
-        uses: actions/checkout@v3
+      
+      # Checks to see if any files in the PR match one of the listed file types.
+      # We can use this filter to decide whether or not to run linters or tests.
+      # You can check if a file with a listed file type is in the PR by doing:
+      # if: ${{ steps.filter.outputs.md == 'true' }}
+      # This will return true if there's a markdown file that was changed
+      # in the PR.
+      - uses: dorny/paths-filter@v2.2.1
+        id: filter
         with:
-          repository: figuren-theater/code-quality
-          ref: refs/heads/main
-          path: code-quality
-
-      - name: Checkout including last 2 commits
-        # Fetch last 2 commits if it's not a PR, so that we can determine the list of modified files.
-        if: ${{ github.base_ref == null }}
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
-
-      - name: Checkout
-        # Do usual checkout if it's a PR.
-        if: ${{ github.base_ref != null }}
-        uses: actions/checkout@v3
-
-      - name: Fetch base branch
-        # Only fetch base ref if it's a PR.
-        if: ${{ github.base_ref != null }}
-        run: git fetch --depth=1 --no-tags origin ${{ github.base_ref }}
-
-      - name: Determine modified files for PR
-        if: ${{ github.base_ref != null }}
-        run: echo "MODIFIED_FILES=$(git diff --name-only FETCH_HEAD HEAD | base64 -w 0)" >> $GITHUB_ENV
-
-      - name: Determine modified files for commit
-        if: ${{ github.base_ref == null }}
-        run: echo "MODIFIED_FILES=$(git diff --name-only HEAD~1 HEAD | base64 -w 0)" >> $GITHUB_ENV
-
-      - id: determine-file-counts
-        name: Determine if modified files should make the workflow run continue
-        run: |
-          MODIFIED_FILES=$(echo "$MODIFIED_FILES" | base64 -d)
-          echo -e "Modified files:\n$MODIFIED_FILES\n"
-
-          FILE_COUNT=$(php -f ${GITHUB_WORKSPACE}/code-quality/bin/determine-modified-files-count.php "$IGNORE_PATH_REGEX" "$MODIFIED_FILES" --invert)
-          PHP_FILE_COUNT=$(php -f ${GITHUB_WORKSPACE}/code-quality/bin/determine-modified-files-count.php ".+\.php|composer\.(json|lock)|phpstan\.neon\.dist|phpunit\.xml" "$MODIFIED_FILES")
-          JS_FILE_COUNT=$(php -f ${GITHUB_WORKSPACE}/code-quality/bin/determine-modified-files-count.php ".+\.(js|snap)|package\.(json|lock)" "$MODIFIED_FILES")
-
-          echo "Changed file count: $FILE_COUNT"
-          echo "Changed PHP file count: $PHP_FILE_COUNT"
-          echo "Changed JS file count: $JS_FILE_COUNT"
-
-          echo "count=$FILE_COUNT" >> $GITHUB_OUTPUT
-          echo "php-count=$PHP_FILE_COUNT" >> $GITHUB_OUTPUT
-          echo "js-count=$JS_FILE_COUNT" >> $GITHUB_OUTPUT
-        env:
-          # Ignore Paths:
-          # - .github/
-          # - !.github/workflows
-          # - .wordpress-org/
-          IGNORE_PATH_REGEX: \.github\/(?!workflows)|\.wordpress-org\/
+          filters: |
+            md:
+              - '**/*.md'
+            js:
+              - '**/*.js'
+            json:
+              - '**/*.json'
+            yml:
+              - '**/*.yml'
+            scss:
+              - '**/*.scss'
+            php:
+              - '**/*.php'
 
   #-----------------------------------------------------------------------------------------------------------------------
 
@@ -74,7 +41,7 @@ jobs:
     name: 'Static Analysis: PHP'
     runs-on: ubuntu-latest
     needs: pre-run
-    if: needs.pre-run.outputs.changed-php-count > 0
+    if: ${{ needs.pre-run.outputs.changed-php == 'true' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
