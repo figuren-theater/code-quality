@@ -47,7 +47,7 @@ This is the long desc
 
 2. Install via command line
     ```sh
-    composer require -dev figuren-theater/code-quality
+    composer require --dev figuren-theater/code-quality
     ```
 3. Create a [phpstan.neon](https://github.com/figuren-theater/new-ft-module/blob/main/phpstan.neon) file in the root of the repository
 
