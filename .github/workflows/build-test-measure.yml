@@ -22,7 +22,7 @@ jobs:
       # if: ${{ steps.filter.outputs.md == 'true' }}
       # This will return true if there's a markdown file that was changed
       # in the PR.
-      - uses: dorny/paths-filter@v2.2.1
+      - uses: dorny/paths-filter@v2.11.1
         id: filter
         with:
           # Enable listing of files matching each filter.
