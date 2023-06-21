@@ -12,6 +12,13 @@ jobs:
       changed-php-count: ${{ steps.determine-file-counts.outputs.php-count }}
       changed-js-count: ${{ steps.determine-file-counts.outputs.js-count }}
     steps:
+      - name: Checkout reusable workflow dir
+        uses: actions/checkout@v3
+        with:
+          repository: figuren-theater/code-quality
+          token: ${{ secrets.GIT_ACCESS_TOKEN }}
+          path: code-quality
+
       - name: Checkout including last 2 commits
         # Fetch last 2 commits if it's not a PR, so that we can determine the list of modified files.
         if: ${{ github.base_ref == null }}
@@ -43,9 +50,9 @@ jobs:
           MODIFIED_FILES=$(echo "$MODIFIED_FILES" | base64 -d)
           echo -e "Modified files:\n$MODIFIED_FILES\n"
 
-          FILE_COUNT=$(php -f bin/determine-modified-files-count.php "$IGNORE_PATH_REGEX" "$MODIFIED_FILES" --invert)
-          PHP_FILE_COUNT=$(php -f bin/determine-modified-files-count.php ".+\.php|composer\.(json|lock)|phpstan\.neon\.dist|phpunit\.xml" "$MODIFIED_FILES")
-          JS_FILE_COUNT=$(php -f bin/determine-modified-files-count.php ".+\.(js|snap)|package\.(json|lock)" "$MODIFIED_FILES")
+          FILE_COUNT=$(php -f code-quality/bin/determine-modified-files-count.php "$IGNORE_PATH_REGEX" "$MODIFIED_FILES" --invert)
+          PHP_FILE_COUNT=$(php -f code-quality/bin/determine-modified-files-count.php ".+\.php|composer\.(json|lock)|phpstan\.neon\.dist|phpunit\.xml" "$MODIFIED_FILES")
+          JS_FILE_COUNT=$(php -f code-quality/bin/determine-modified-files-count.php ".+\.(js|snap)|package\.(json|lock)" "$MODIFIED_FILES")
 
           echo "Changed file count: $FILE_COUNT"
           echo "Changed PHP file count: $PHP_FILE_COUNT"
