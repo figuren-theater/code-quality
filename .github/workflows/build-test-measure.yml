@@ -50,9 +50,9 @@ jobs:
           MODIFIED_FILES=$(echo "$MODIFIED_FILES" | base64 -d)
           echo -e "Modified files:\n$MODIFIED_FILES\n"
 
-          FILE_COUNT=$(php -f code-quality/bin/determine-modified-files-count.php "$IGNORE_PATH_REGEX" "$MODIFIED_FILES" --invert)
-          PHP_FILE_COUNT=$(php -f code-quality/bin/determine-modified-files-count.php ".+\.php|composer\.(json|lock)|phpstan\.neon\.dist|phpunit\.xml" "$MODIFIED_FILES")
-          JS_FILE_COUNT=$(php -f code-quality/bin/determine-modified-files-count.php ".+\.(js|snap)|package\.(json|lock)" "$MODIFIED_FILES")
+          FILE_COUNT=$(php -f ${GITHUB_WORKSPACE}/code-quality/bin/determine-modified-files-count.php "$IGNORE_PATH_REGEX" "$MODIFIED_FILES" --invert)
+          PHP_FILE_COUNT=$(php -f ${GITHUB_WORKSPACE}/code-quality/bin/determine-modified-files-count.php ".+\.php|composer\.(json|lock)|phpstan\.neon\.dist|phpunit\.xml" "$MODIFIED_FILES")
+          JS_FILE_COUNT=$(php -f ${GITHUB_WORKSPACE}/code-quality/bin/determine-modified-files-count.php ".+\.(js|snap)|package\.(json|lock)" "$MODIFIED_FILES")
 
           echo "Changed file count: $FILE_COUNT"
           echo "Changed PHP file count: $PHP_FILE_COUNT"
