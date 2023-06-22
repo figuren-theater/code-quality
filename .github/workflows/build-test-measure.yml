@@ -10,20 +10,21 @@ jobs:
   pre-run:
     name: 'Pre run'
     runs-on: ubuntu-latest
-    outputs:
-      changed-php: ${{ steps.filter.outputs.php }}
-      changed-php_files: ${{ steps.filter.outputs.php_files }}
-      changed-js: ${{ steps.filter.outputs.js }}
+    # outputs:
+    # changed-php: ${{ steps.filter.outputs.php }}
+    # changed-php_files: ${{ steps.filter.outputs.php_files }}
+    # changed-js: ${{ steps.filter.outputs.js }}
     steps:
       - uses: actions/checkout@v3
       # Checks to see if any files in the PR match one of the listed file types.
       # We can use this filter to decide whether or not to run linters or tests.
       # You can check if a file with a listed file type is in the PR by doing:
-      # if: ${{ steps.filter.outputs.md == 'true' }}
-      # This will return true if there's a markdown file that was changed
-      # in the PR.
+        # if: ${{ steps.filter.outputs.md == 'true' }}
+        # This will return true if there's a markdown file that was changed
+        # in the PR.
       - uses: dorny/paths-filter@v2.11.1
-        id: filter
+        id: dorny-paths-filter
+        # run: echo "{changed-php}=${{ steps.filter.outputs.php }}" >> $GITHUB_OUTPUT
         with:
           # Enable listing of files matching each filter.
           # Paths to files will be available in `${FILTER_NAME}_files` output variable.
@@ -46,6 +47,11 @@ jobs:
               - added|modified: '**/*.scss'
             php:
               - added|modified: '**/*.php'
+      - name: get-files-filter
+      # SECRET_HANDLE=$(secret-store store-secret "$GENERATED_SECRET")
+        run: |
+          echo "changed-php=${{ steps.dorny-paths-filter.outputs.php }}" >> "$GITHUB_OUTPUT"
+          echo "changed-php_files=${{ steps.dorny-paths-filter.outputs.php_files }}" >> "$GITHUB_OUTPUT"
 
   #-----------------------------------------------------------------------------------------------------------------------
 
