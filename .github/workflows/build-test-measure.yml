@@ -10,10 +10,10 @@ jobs:
   pre-run:
     name: 'Pre run'
     runs-on: ubuntu-latest
-    # outputs:
-    # changed-php: ${{ steps.filter.outputs.php }}
-    # changed-php_files: ${{ steps.filter.outputs.php_files }}
-    # changed-js: ${{ steps.filter.outputs.js }}
+    outputs:
+      changed-php: ${{ steps.filter.outputs.php }}
+      changed-php_files: ${{ steps.filter.outputs.php_files }}
+      changed-js: ${{ steps.filter.outputs.js }}
     steps:
       - uses: actions/checkout@v3
       # Checks to see if any files in the PR match one of the listed file types.
@@ -47,11 +47,11 @@ jobs:
               - added|modified: '**/*.scss'
             php:
               - added|modified: '**/*.php'
-      - name: get-files-filter
-      # SECRET_HANDLE=$(secret-store store-secret "$GENERATED_SECRET")
-        run: |
-          echo "changed-php=${{ steps.dorny-paths-filter.outputs.php }}" >> "$GITHUB_OUTPUT"
-          echo "changed-php_files=${{ steps.dorny-paths-filter.outputs.php_files }}" >> "$GITHUB_OUTPUT"
+    #  - name: get-files-filter
+    #  # SECRET_HANDLE=$(secret-store store-secret "$GENERATED_SECRET")
+    #    run: |
+    #      echo "changed-php=${{ steps.dorny-paths-filter.outputs.php }}" >> "$GITHUB_OUTPUT"
+    #      echo "changed-php_files=${{ steps.dorny-paths-filter.outputs.php_files }}" >> "$GITHUB_OUTPUT"
 
   #-----------------------------------------------------------------------------------------------------------------------
 
