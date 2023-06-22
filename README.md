@@ -59,6 +59,7 @@ This is the long desc
 |Repo|Code Quality|
 |---|---|
 |[ft-core](https://github.com/figuren-theater/ft-core/)| [![Build, test & measure](https://github.com/figuren-theater/ft-core/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-core/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml) |
+|[ft-platform](https://github.com/figuren-theater/ft-platform/)| [![Build, test & measure](https://github.com/figuren-theater/ft-platform/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-platform/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml) |
 
 
 ## Built with & uses
