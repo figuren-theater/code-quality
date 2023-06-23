@@ -16,9 +16,19 @@ jobs:
       changed-js: ${{ steps.filter.outputs.js }}
     steps:
       - uses: actions/checkout@v3
-      # Checks to see if any files in the PR match one of the listed file types.
-      # We can use this filter to decide whether or not to run linters or tests.
-      # You can check if a file with a listed file type is in the PR by doing:
+
+        # Dependency Review Action
+        #
+        # This Action will scan dependency manifest files that change as part of a Pull Request, surfacing known-vulnerable versions of the packages declared or updated in the PR. Once installed, if the workflow run is marked as required, PRs introducing known-vulnerable packages will be blocked from merging.
+        #
+        # Source repository: https://github.com/actions/dependency-review-action
+        # Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement       
+      - name: Dependency Review
+        uses: actions/dependency-review-action@v2
+      
+        # Checks to see if any files in the PR match one of the listed file types.
+        # We can use this filter to decide whether or not to run linters or tests.
+        # You can check if a file with a listed file type is in the PR by doing:
         # if: ${{ steps.filter.outputs.md == 'true' }}
         # This will return true if there's a markdown file that was changed
         # in the PR.
@@ -78,18 +88,18 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-composer-
 
-      - name: Install Composer dependencies
-        run: composer install --prefer-dist --optimize-autoloader --no-progress --no-interaction
-
       - name: Validate composer.json
         run: composer --no-interaction validate --no-check-all
+
+      - name: Normalize composer.json
+        run: composer normalize --dry-run
+      
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --optimize-autoloader --no-progress --no-interaction
 
       #- name: Detect coding standard violations (PHPCS)
       #  run: vendor/bin/phpcs -q --report=checkstyle --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 | cs2pr --graceful-warnings
 
-      - name: Normalize composer.json
-        run: composer normalize --dry-run
-  
   #-----------------------------------------------------------------------------------------------------------------------
 
   static-analysis-php:
