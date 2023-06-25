@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "764c9eee335bf05c10b743d23bc78a0e",
+    "content-hash": "aa77a99b510bb7a456855d4736d62b55",
     "packages": [
         {
             "name": "automattic/vipwpcs",
@@ -576,16 +576,15 @@
         },
         {
             "name": "figuren-theater/coding-standards",
-            "version": "dev-main",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/figuren-theater/coding-standards",
-                "reference": "df9dc11a30ac6e5d98e21956413c36ab7246912b"
+                "reference": "c62851499a3e5fbf7887dd3f3089cd7cc7ebc145"
             },
             "require": {
                 "humanmade/coding-standards": "^1.2"
             },
-            "default-branch": true,
             "type": "phpcodesniffer-standard",
             "license": [
                 "GPL-3.0-or-later"
@@ -614,7 +613,7 @@
                 "issues": "https://github.com/figuren-theater/coding-standards/issues",
                 "source": "https://github.com/figuren-theater/coding-standards"
             },
-            "time": "2023-06-25T14:58:34+00:00"
+            "time": "2023-06-25T19:38:31+00:00"
         },
         {
             "name": "humanmade/coding-standards",
@@ -1400,9 +1399,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "figuren-theater/coding-standards": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
