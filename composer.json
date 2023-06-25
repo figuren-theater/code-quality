@@ -3,7 +3,12 @@
 	"description": "Development tools to measure and test the code quality of figuren.theater, the WordPress Multisite network for puppeteers.",
     "homepage": "https://websites.fuer.figuren.theater",
     "type": "library",
-    "keywords": ["wordpress"],
+    "keywords": [
+        ".editorconfig",
+        "phpcs.xml",
+        "phpstan.neon",
+        "wordpress"
+    ],
     "license": "GPL-3.0-or-later",
     "authors": [
         {
@@ -33,8 +38,7 @@
 		"phpstan/extension-installer": "^1.3",
 		"php-stubs/wordpress-globals": "^0.2.0",
 		"ergebnis/composer-normalize": "^2.31",
-		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
-		"wearerequired/coding-standards": "dev-master"
+		"figuren-theater/coding-standards": "dev-main"
 	},
 	"config": {
 		"allow-plugins": {
