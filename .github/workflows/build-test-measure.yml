@@ -2,9 +2,8 @@ name: Build, test & measure
 
 on:
   workflow_call:
-  push:
   pull_request:
-  # dorny/paths-filter requires this action to run only on 'push' or 'pull_request' events 
+  # dorny/paths-filter requires this action to run only on 'push' or 'pull_request' events
 
 jobs:
   pre-run:
@@ -22,10 +21,10 @@ jobs:
         # This Action will scan dependency manifest files that change as part of a Pull Request, surfacing known-vulnerable versions of the packages declared or updated in the PR. Once installed, if the workflow run is marked as required, PRs introducing known-vulnerable packages will be blocked from merging.
         #
         # Source repository: https://github.com/actions/dependency-review-action
-        # Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement       
+        # Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement
       - name: Dependency Review
         uses: actions/dependency-review-action@v2
-      
+
         # Checks to see if any files in the PR match one of the listed file types.
         # We can use this filter to decide whether or not to run linters or tests.
         # You can check if a file with a listed file type is in the PR by doing:
@@ -41,7 +40,7 @@ jobs:
           # Paths will be escaped and space-delimited.
           # Output is usable as command line argument list in linux shell
           list-files: shell
-          
+
           # It doesn't make sense to lint deleted files.
           # Therefore we specify we are only interested in added or modified files.
           filters: |
@@ -93,7 +92,7 @@ jobs:
 
       - name: Normalize composer.json
         run: composer normalize --dry-run
-      
+
       - name: Install Composer dependencies
         run: composer install --prefer-dist --optimize-autoloader --no-progress --no-interaction
 
