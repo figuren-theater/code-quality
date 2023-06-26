@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ba18d71270b1acbe91c1615eea43db7b",
+    "content-hash": "4e6bed3c81365616954fdc6290ea4623",
     "packages": [
         {
             "name": "automattic/vipwpcs",
@@ -625,16 +625,16 @@
         },
         {
             "name": "figuren-theater/phpstan",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/figuren-theater/phpstan.git",
-                "reference": "f6090d0f8bae370a34cc28ee4287fc780c7ec58c"
+                "reference": "2772121bb48d9ebad9defc32b24de039c48bb407"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/figuren-theater/phpstan/zipball/f6090d0f8bae370a34cc28ee4287fc780c7ec58c",
-                "reference": "f6090d0f8bae370a34cc28ee4287fc780c7ec58c",
+                "url": "https://api.github.com/repos/figuren-theater/phpstan/zipball/2772121bb48d9ebad9defc32b24de039c48bb407",
+                "reference": "2772121bb48d9ebad9defc32b24de039c48bb407",
                 "shasum": ""
             },
             "require": {
@@ -675,7 +675,7 @@
                 "issues": "https://github.com/figuren-theater/phpstan/issues",
                 "source": "https://github.com/figuren-theater/phpstan"
             },
-            "time": "2023-06-26T11:52:20+00:00"
+            "time": "2023-06-26T13:50:12+00:00"
         },
         {
             "name": "humanmade/coding-standards",
