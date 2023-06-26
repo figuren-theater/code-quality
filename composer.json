@@ -1,45 +1,45 @@
 {
 	"name": "figuren-theater/code-quality",
 	"description": "Development tools to measure and test the code quality of figuren.theater, the WordPress Multisite network for puppeteers.",
-    "homepage": "https://websites.fuer.figuren.theater",
-    "type": "library",
-    "keywords": [
-        ".editorconfig",
-        "phpcs.xml",
-        "phpstan.neon",
-        "wordpress"
-    ],
-    "license": "GPL-3.0-or-later",
-    "authors": [
-        {
-            "name": "figuren.theater",
-            "email": "info@figuren.theater"
-        },
-        {
-            "name": "Carsten Bach",
-            "email": "mail@carsten-bach.de",
-            "homepage": "https://carsten-bach.de",
-            "role": "Developer"
-        }
-    ],
-    "support": {
-        "email": "info@figuren.theater",
-        "issues": "https://github.com/figuren-theater/code-quality/issues",
-        "source": "https://github.com/figuren-theater/code-quality"
-    },
+	"license": "GPL-3.0-or-later",
+	"type": "library",
+	"keywords": [
+		".editorconfig",
+		"phpcs.xml",
+		"phpstan.neon",
+		"wordpress"
+	],
+	"authors": [
+		{
+			"name": "figuren.theater",
+			"email": "info@figuren.theater"
+		},
+		{
+			"name": "Carsten Bach",
+			"email": "mail@carsten-bach.de",
+			"homepage": "https://carsten-bach.de",
+			"role": "Developer"
+		}
+	],
+	"homepage": "https://websites.fuer.figuren.theater",
+	"support": {
+		"email": "info@figuren.theater",
+		"issues": "https://github.com/figuren-theater/code-quality/issues",
+		"source": "https://github.com/figuren-theater/code-quality"
+	},
+	"require": {
+		"ergebnis/composer-normalize": "^2.31",
+		"figuren-theater/coding-standards": "^0.1.0",
+		"php-stubs/wordpress-globals": "^0.2.0",
+		"phpstan/extension-installer": "^1.3",
+		"szepeviktor/phpstan-wordpress": "^1.3"
+	},
 	"repositories": [
 		{
-            "type": "git",
-            "url": "https://github.com/figuren-theater/coding-standards"
-        }
+			"type": "git",
+			"url": "https://github.com/figuren-theater/coding-standards"
+		}
 	],
-	"require": {
-		"szepeviktor/phpstan-wordpress": "^1.3",
-		"phpstan/extension-installer": "^1.3",
-		"php-stubs/wordpress-globals": "^0.2.0",
-		"ergebnis/composer-normalize": "^2.31",
-		"figuren-theater/coding-standards": "^0.1.0"
-	},
 	"config": {
 		"allow-plugins": {
 			"phpstan/extension-installer": true,
