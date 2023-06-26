@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2bc467560897b87eeb04f89afaa6ced6",
+    "content-hash": "ba18d71270b1acbe91c1615eea43db7b",
     "packages": [
         {
             "name": "automattic/vipwpcs",
@@ -579,14 +579,21 @@
             "version": "0.2.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/figuren-theater/coding-standards",
+                "url": "https://github.com/figuren-theater/coding-standards.git",
                 "reference": "c415112456effadbbe3cbefb436e65af54685f5f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/figuren-theater/coding-standards/zipball/c415112456effadbbe3cbefb436e65af54685f5f",
+                "reference": "c415112456effadbbe3cbefb436e65af54685f5f",
+                "shasum": ""
             },
             "require": {
                 "ergebnis/composer-normalize": "^2.31",
                 "humanmade/coding-standards": "^1.2"
             },
             "type": "phpcodesniffer-standard",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-or-later"
             ],
