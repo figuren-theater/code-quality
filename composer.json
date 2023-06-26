@@ -30,16 +30,9 @@
 	"require": {
 		"ergebnis/composer-normalize": "^2.31",
 		"figuren-theater/coding-standards": "^0",
-		"php-stubs/wordpress-globals": "^0.2.0",
 		"phpstan/extension-installer": "^1.3",
-		"szepeviktor/phpstan-wordpress": "^1.3"
+		"figuren-theater/phpstan": "^1.0"
 	},
-	"repositories": [
-		{
-			"type": "git",
-			"url": "https://github.com/figuren-theater/coding-standards"
-		}
-	],
 	"config": {
 		"allow-plugins": {
 			"phpstan/extension-installer": true,

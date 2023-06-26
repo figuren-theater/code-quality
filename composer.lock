@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c0531e8bf5236a6dc2c4cb3cba637dd9",
+    "content-hash": "2bc467560897b87eeb04f89afaa6ced6",
     "packages": [
         {
             "name": "automattic/vipwpcs",
@@ -615,6 +615,60 @@
                 "source": "https://github.com/figuren-theater/coding-standards"
             },
             "time": "2023-06-26T09:29:32+00:00"
+        },
+        {
+            "name": "figuren-theater/phpstan",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/figuren-theater/phpstan.git",
+                "reference": "f6090d0f8bae370a34cc28ee4287fc780c7ec58c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/figuren-theater/phpstan/zipball/f6090d0f8bae370a34cc28ee4287fc780c7ec58c",
+                "reference": "f6090d0f8bae370a34cc28ee4287fc780c7ec58c",
+                "shasum": ""
+            },
+            "require": {
+                "php-stubs/wordpress-globals": "^0.2.0",
+                "szepeviktor/phpstan-wordpress": "^1.3"
+            },
+            "type": "phpstan-extension",
+            "extra": {
+                "phpstan": {
+                    "includes": [
+                        "extension.neon"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "figuren.theater",
+                    "email": "info@figuren.theater"
+                },
+                {
+                    "name": "Carsten Bach",
+                    "email": "mail@carsten-bach.de",
+                    "homepage": "https://carsten-bach.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "org-wide used phpstan.neon file for the WordPress Multisite network for puppeteers figuren.theater",
+            "homepage": "https://figuren.theater",
+            "keywords": [
+                "wordpress"
+            ],
+            "support": {
+                "email": "info@figuren.theater",
+                "issues": "https://github.com/figuren-theater/phpstan/issues",
+                "source": "https://github.com/figuren-theater/phpstan"
+            },
+            "time": "2023-06-26T11:52:20+00:00"
         },
         {
             "name": "humanmade/coding-standards",
