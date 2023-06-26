@@ -576,11 +576,11 @@
         },
         {
             "name": "figuren-theater/coding-standards",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/figuren-theater/coding-standards",
-                "reference": "a4ee413b7963178a38be573a16e275c8e6a5d43a"
+                "reference": "c415112456effadbbe3cbefb436e65af54685f5f"
             },
             "require": {
                 "ergebnis/composer-normalize": "^2.31",
@@ -614,7 +614,7 @@
                 "issues": "https://github.com/figuren-theater/coding-standards/issues",
                 "source": "https://github.com/figuren-theater/coding-standards"
             },
-            "time": "2023-06-26T09:01:10+00:00"
+            "time": "2023-06-26T09:29:32+00:00"
         },
         {
             "name": "humanmade/coding-standards",
