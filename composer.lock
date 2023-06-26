@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "16c52758273e8ab895d83ff485b4e58f",
+    "content-hash": "c0531e8bf5236a6dc2c4cb3cba637dd9",
     "packages": [
         {
             "name": "automattic/vipwpcs",
@@ -576,13 +576,14 @@
         },
         {
             "name": "figuren-theater/coding-standards",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/figuren-theater/coding-standards",
-                "reference": "c62851499a3e5fbf7887dd3f3089cd7cc7ebc145"
+                "reference": "a4ee413b7963178a38be573a16e275c8e6a5d43a"
             },
             "require": {
+                "ergebnis/composer-normalize": "^2.31",
                 "humanmade/coding-standards": "^1.2"
             },
             "type": "phpcodesniffer-standard",
@@ -613,7 +614,7 @@
                 "issues": "https://github.com/figuren-theater/coding-standards/issues",
                 "source": "https://github.com/figuren-theater/coding-standards"
             },
-            "time": "2023-06-25T19:38:31+00:00"
+            "time": "2023-06-26T09:01:10+00:00"
         },
         {
             "name": "humanmade/coding-standards",
