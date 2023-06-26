@@ -12,18 +12,9 @@ jobs:
     outputs:
       changed-php: ${{ steps.filter.outputs.php }}
       changed-php_files: ${{ steps.filter.outputs.php_files }}
-      changed-js: ${{ steps.filter.outputs.js }}
+      changed-json: ${{ steps.filter.outputs.json }}
     steps:
       - uses: actions/checkout@v3
-
-        # Dependency Review Action
-        #
-        # This Action will scan dependency manifest files that change as part of a Pull Request, surfacing known-vulnerable versions of the packages declared or updated in the PR. Once installed, if the workflow run is marked as required, PRs introducing known-vulnerable packages will be blocked from merging.
-        #
-        # Source repository: https://github.com/actions/dependency-review-action
-        # Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement
-      - name: Dependency Review
-        uses: actions/dependency-review-action@v2
 
         # Checks to see if any files in the PR match one of the listed file types.
         # We can use this filter to decide whether or not to run linters or tests.
@@ -59,6 +50,50 @@ jobs:
 
   #-----------------------------------------------------------------------------------------------------------------------
 
+  lint-json:
+    name: 'Lint: .json files'
+    needs: pre-run
+    if: needs.pre-run.outputs.changed-json == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: Configure Composer cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Validate composer.json
+        run: composer --no-interaction validate --no-check-all
+
+      # - name: Validate package.json
+        # run: ...
+
+      # Dependency Review Action
+      #
+      # This Action will scan dependency manifest files that change as part of a Pull Request, surfacing known-vulnerable versions of the packages declared or updated in the PR. Once installed, if the workflow run is marked as required, PRs introducing known-vulnerable packages will be blocked from merging.
+      #
+      # Source repository: https://github.com/actions/dependency-review-action
+      # Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement
+      - name: Dependency Review
+        uses: actions/dependency-review-action@v2
+
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --optimize-autoloader --no-progress --no-interaction
+
+      - name: Normalize composer.json
+        run: composer normalize --dry-run
+
+  #-----------------------------------------------------------------------------------------------------------------------
+
   lint-php:
     name: 'Lint: PHP'
     needs: pre-run
@@ -86,12 +121,6 @@ jobs:
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-composer-
-
-      - name: Validate composer.json
-        run: composer --no-interaction validate --no-check-all
-
-      - name: Normalize composer.json
-        run: composer normalize --dry-run
 
       - name: Install Composer dependencies
         run: composer install --prefer-dist --optimize-autoloader --no-progress --no-interaction
