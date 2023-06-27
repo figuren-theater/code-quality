@@ -56,5 +56,5 @@ on:
 jobs:
   call-workflow-update-changelog:
     uses: figuren-theater/.github/.github/workflows/update-changelog.yml@main
-    # secrets: inherit
+    secrets: inherit
 
