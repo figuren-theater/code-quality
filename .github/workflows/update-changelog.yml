@@ -1,0 +1,49 @@
+name: 'Update Changelog'
+
+on:
+  release:
+    types: [released]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        # Push to protected branches
+        # If your repository uses protected branches you have to make some changes
+        # to your Workflow for the Action to work properly:
+        #
+        # You need a Personal Access Token and you either have to
+        # a) allow force pushes
+        # or
+        # b) the Personal Access Token needs to belong to an Administrator.
+        #
+        # Add the following to the 'with:' group: 'token: ${{ secrets.PAT }}'
+        #
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.BOT_TOKEN }}
+          ref: ${{ github.event.release.target_commitish }}
+
+      - name: Update Changelog
+        uses: stefanzweifel/changelog-updater-action@v1
+        with:
+          release-notes: ${{ github.event.release.body }}
+          latest-version: ${{ github.event.release.tag_name }}
+
+      - name: Commit updated CHANGELOG
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          branch: ${{ github.event.release.target_commitish }}
+          commit_message: Update CHANGELOG
+          file_pattern: CHANGELOG.md
+
+          # Optional commit user and author settings
+          # defaults to "github-actions[bot]"
+          commit_user_name: figuren-theater-bot
+          # defaults to "41898282+github-actions[bot]@users.noreply.github.com"
+          commit_user_email: email-roboter@figuren.theater
+          # defaults to author of the commit that triggered the run
+          commit_author: Frieda Theodor Automatisierungs-Bot <email-roboter@figuren.theater>
+
