@@ -2,7 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/.github/compare/0.4.3...HEAD)
+## [Unreleased](https://github.com/figuren-theater/.github/compare/0.4.4...HEAD)
+
+## [0.4.4](https://github.com/figuren-theater/.github/compare/0.4.3...0.4.4) - 2023-06-28
+
+- Enable automated phpcs run ([#17](https://github.com/figuren-theater/code-quality/pull/17))
 
 ## [0.4.3](https://github.com/figuren-theater/.github/compare/0.4.2...0.4.3) - 2023-06-27
 
