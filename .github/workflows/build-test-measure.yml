@@ -3,6 +3,7 @@ name: Build, test & measure
 on:
   workflow_call:
   pull_request:
+  push:
   # dorny/paths-filter requires this action to run only on 'push' or 'pull_request' events
 
 jobs:
