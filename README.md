@@ -66,25 +66,15 @@ See the workflow running for the figuren.theater platform
 
 ## Install
 
-1. Add this repository to your `composer.json`
-    ```json
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/figuren-theater/code-quality"
-        }
-    ]
-    ```
-
-2. Install via command line
+1. Install via command line
     ```sh
     composer require --dev figuren-theater/code-quality
     ```
-3. Create a [phpstan.neon](https://github.com/figuren-theater/new-ft-module/blob/main/phpstan.neon) file in the root of the repository
+2. Create a [phpstan.neon](https://github.com/figuren-theater/new-ft-module/blob/main/phpstan.neon) file in the root of the repository
 
 ---
 
-4. Enable the **Build, test & measure** workflow as required status check for the repo in *[Org >> Settings >> Actions](https://github.com/organizations/figuren-theater/settings/actions)* under **Required workflows** 
+3. Enable the **Build, test & measure** workflow as required status check for the repo in *[Org >> Settings >> Actions](https://github.com/organizations/figuren-theater/settings/actions)* under **Required workflows** 
 (This step is needed until all repos require this status check by default.) 
 
 ## Usage
