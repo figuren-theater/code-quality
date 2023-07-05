@@ -2,7 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/.github/compare/0.4.4...HEAD)
+## [Unreleased](https://github.com/figuren-theater/.github/compare/0.4.5...HEAD)
+
+## [0.4.5](https://github.com/figuren-theater/.github/compare/0.4.4...0.4.5) - 2023-07-05
+
+- Add 'Build, test & measure' as sep. workflow as Github cannot use it … ([#20](https://github.com/figuren-theater/code-quality/pull/20))
+- Allow build-test-measure to be triggered by push, which is needed for… ([#19](https://github.com/figuren-theater/code-quality/pull/19))
 
 ## [0.4.4](https://github.com/figuren-theater/.github/compare/0.4.3...0.4.4) - 2023-06-28
 
