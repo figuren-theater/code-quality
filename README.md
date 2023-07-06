@@ -60,31 +60,21 @@ See the workflow running for the figuren.theater platform
 |  22.| └── [ft-network-block-patterns](https://github.com/figuren-theater/ft-network-block-patterns)|   |
 |  23.|[ft-themes](https://github.com/figuren-theater/ft-themes)|   |
 |  24.|[ft-theming](https://github.com/figuren-theater/ft-theming)|   |
-|  25.|[.github](https://github.com/figuren-theater/.github/)| [![Build, test & measure](https://github.com/figuren-theater/.github/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/.github/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml) |
-|  26.|[code-quality](https://github.com/figuren-theater/code-quality/)| [![Build, test & measure](https://github.com/figuren-theater/code-quality/actions/workflows/required/figuren-theater/code-quality/code-quality/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/.github/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml) |
+|  25.|[.github](https://github.com/figuren-theater/.github/)| [![Build, test & measure](https://github.com/figuren-theater/.github/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/.github/actions/workflows/build-test-measure.yml) |
+|  26.|[code-quality](https://github.com/figuren-theater/code-quality/)| [![Build, test & measure](https://github.com/figuren-theater/code-quality/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/code-quality/actions/workflows/build-test-measure.yml) |
 
 
 ## Install
 
-1. Add this repository to your `composer.json`
-    ```json
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/figuren-theater/code-quality"
-        }
-    ]
-    ```
-
-2. Install via command line
+1. Install via command line
     ```sh
     composer require --dev figuren-theater/code-quality
     ```
-3. Create a [phpstan.neon](https://github.com/figuren-theater/new-ft-module/blob/main/phpstan.neon) file in the root of the repository
+2. Create a [phpstan.neon](https://github.com/figuren-theater/new-ft-module/blob/main/phpstan.neon) file in the root of the repository
 
 ---
 
-4. Enable the **Build, test & measure** workflow as required status check for the repo in *[Org >> Settings >> Actions](https://github.com/organizations/figuren-theater/settings/actions)* under **Required workflows** 
+3. Enable the **Build, test & measure** workflow as required status check for the repo in *[Org >> Settings >> Actions](https://github.com/organizations/figuren-theater/settings/actions)* under **Required workflows** 
 (This step is needed until all repos require this status check by default.) 
 
 ## Usage
