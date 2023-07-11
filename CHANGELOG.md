@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/.github/compare/0.4.5...HEAD)
+## [Unreleased](https://github.com/figuren-theater/.github/compare/0.5.0...HEAD)
+
+## [0.5.0](https://github.com/figuren-theater/.github/compare/0.4.5...0.5.0) - 2023-07-11
+
+- Try finding the :bug:  ([#23](https://github.com/figuren-theater/code-quality/pull/23))
+
+### 🚀 Added
+
+- Develop ([#21](https://github.com/figuren-theater/code-quality/pull/21))
 
 ## [0.4.5](https://github.com/figuren-theater/.github/compare/0.4.4...0.4.5) - 2023-07-05
 
