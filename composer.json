@@ -28,6 +28,7 @@
 		"source": "https://github.com/figuren-theater/code-quality"
 	},
 	"require": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
 		"ergebnis/composer-normalize": "^2.31",
 		"figuren-theater/coding-standards": "^0",
 		"figuren-theater/phpstan": "^1",
