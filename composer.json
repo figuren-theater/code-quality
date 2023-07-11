@@ -31,7 +31,8 @@
 		"ergebnis/composer-normalize": "^2.31",
 		"figuren-theater/coding-standards": "^0",
 		"figuren-theater/phpstan": "^1",
-		"phpstan/extension-installer": "^1.3"
+		"phpstan/extension-installer": "^1.3",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.2"
 	},
 	"config": {
 		"allow-plugins": {
