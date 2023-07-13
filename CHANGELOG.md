@@ -2,7 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/.github/compare/0.5.0...HEAD)
+## [Unreleased](https://github.com/figuren-theater/.github/compare/0.5.1...HEAD)
+
+## [0.5.1](https://github.com/figuren-theater/.github/compare/0.5.0...0.5.1) - 2023-07-13
+
+- Add more badges for "quality checked" repos ([#24](https://github.com/figuren-theater/code-quality/pull/24))
 
 ## [0.5.0](https://github.com/figuren-theater/.github/compare/0.4.5...0.5.0) - 2023-07-11
 
