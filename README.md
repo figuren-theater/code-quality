@@ -37,7 +37,7 @@ See the workflow running for the figuren.theater platform
 ||Repo|Code Quality|
 |-:|-|-|
 |  1. |[ft-admin-ui](https://github.com/figuren-theater/ft-admin-ui/)| [![Build, test & measure](https://github.com/figuren-theater/ft-admin-ui/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-admin-ui/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml) |
-|  2. |[ft-core](https://github.com/figuren-theater/ft-core/)| [![Build, test & measure](https://github.com/figuren-theater/ft-core/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-core/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml) |
+|  2. |[ft-core](https://github.com/figuren-theater/ft-core/)| [![Build, test & measure](https://github.com/figuren-theater/ft-core/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-core/actions/workflows/build-test-measure.yml) |
 |  3. |[ft-coresites](https://github.com/figuren-theater/ft-coresites)|   |
 |  4. |[ft-data](https://github.com/figuren-theater/ft-data)|   |
 |  5. | └── [ft-network-sourcelinks](https://github.com/figuren-theater/ft-network-sourcelinks)|   |
@@ -122,7 +122,7 @@ who participated in this project.
 
 ## License
 
-This project is licensed under the **GPL-3.0-or-later**, see the [LICENSE](LICENSE) file for
+This project is licensed under the **GPL-3.0-or-later**, see the [LICENSE](/LICENSE) file for
 details
 
 ## Acknowledgments
