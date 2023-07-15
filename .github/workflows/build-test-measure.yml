@@ -85,7 +85,7 @@ jobs:
       # Source repository: https://github.com/actions/dependency-review-action
       # Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement
       - name: Dependency Review
-        uses: actions/dependency-review-action@v2
+        uses: actions/dependency-review-action@v3
 
       - name: Install Composer dependencies
         run: composer install --prefer-dist --optimize-autoloader --no-progress --no-interaction
