@@ -27,7 +27,7 @@
 This is the long desc
 
 * [x] *list closed tracking-issues or `docs` files here*
-* [ ] Do you have any [ideas](/issues/new) ?
+* [ ] Do you have any [ideas](https://github.com/figuren-theater/code-quality/issues/new) ?
 
 ## Background & Motivation
 
@@ -73,10 +73,6 @@ See the workflow running for the figuren.theater platform
     ```
 2. Create a [phpstan.neon](https://github.com/figuren-theater/new-ft-module/blob/main/phpstan.neon) file in the root of the repository
 
----
-
-3. Enable the **Build, test & measure** workflow as required status check for the repo in *[Org >> Settings >> Actions](https://github.com/organizations/figuren-theater/settings/actions)* under **Required workflows** 
-(This step is needed until all repos require this status check by default.) 
 
 ## Usage
 
@@ -111,13 +107,13 @@ Don't forget to give the project a star! Thanks again!
 ## Versioning
 
 We use [Semantic Versioning](http://semver.org/) for versioning. For the versions
-available, see the [tags on this repository](/tags).
+available, see the [tags on this repository](https://github.com/figuren-theater/code-quality/tags).
 
 ## Authors
 
   - **Carsten Bach** - *Provided idea & code* - [figuren.theater/crew](https://figuren.theater/crew/)
 
-See also the list of [contributors](/contributors)
+See also the list of [contributors](https://github.com/figuren-theater/code-quality/contributors)
 who participated in this project.
 
 ## License
