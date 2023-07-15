@@ -62,7 +62,7 @@ See the workflow running for the figuren.theater platform
 |  24.|[ft-theming](https://github.com/figuren-theater/ft-theming)|   |
 |  25.|[.github](https://github.com/figuren-theater/.github/)| [![Build, test & measure](https://github.com/figuren-theater/.github/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/.github/actions/workflows/build-test-measure.yml) |
 |  26.|[code-quality](https://github.com/figuren-theater/code-quality/)| [![Build, test & measure](https://github.com/figuren-theater/code-quality/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/code-quality/actions/workflows/build-test-measure.yml) |
-|  27.|[new-ft-module](https://github.com/figuren-theater/new-ft-module/)| [![Build, test & measure](https://github.com/figuren-theater/new-ft-module/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/new-ft-module/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml) |
+|  27.|[new-ft-module](https://github.com/figuren-theater/new-ft-module/)| [![Build, test & measure](https://github.com/figuren-theater/new-ft-module/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/new-ft-module/actions/workflows/build-test-measure.yml) |
 
 
 ## Install
