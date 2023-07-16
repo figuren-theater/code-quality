@@ -42,7 +42,7 @@ See the workflow running for the figuren.theater platform
 |  4. |[ft-data](https://github.com/figuren-theater/ft-data)|   |
 |  5. | └── [ft-network-sourcelinks](https://github.com/figuren-theater/ft-network-sourcelinks)|   |
 |  6. |[ft-interactive](https://github.com/figuren-theater/ft-interactive)|   |
-|  7. |[ft-maintenance](https://github.com/figuren-theater/ft-maintenance)|   |
+|  7. |[ft-maintenance](https://github.com/figuren-theater/ft-maintenance)| [![Build, test & measure](https://github.com/figuren-theater/ft-maintenance/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-maintenance/actions/workflows/build-test-measure.yml)  |
 |  8. |[ft-media](https://github.com/figuren-theater/ft-media)|   |
 |  9. |[ft-onboarding](https://github.com/figuren-theater/ft-onboarding)|   |
 |  10.| ├── [ft-core-block-domaincheck](https://github.com/figuren-theater/ft-core-block-domaincheck)|   |
