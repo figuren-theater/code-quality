@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.6.2...HEAD)
+## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.6.3...HEAD)
+
+## [0.6.3](https://github.com/figuren-theater/code-quality/compare/0.6.2...0.6.3) - 2023-07-17
+
+### 🐛 Fixed
+
+- Only run 'Lint: json files' for changed .json files AND when it is a … ([#30](https://github.com/figuren-theater/code-quality/pull/30))
 
 ## [0.6.2](https://github.com/figuren-theater/code-quality/compare/0.6.1...0.6.2) - 2023-07-17
 
