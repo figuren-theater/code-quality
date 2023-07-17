@@ -56,7 +56,7 @@ jobs:
     needs: pre-run
     # only run for changed .json files AND when it is a pull_request
     # because 'github.base_ref' will not be available on push
-    if: needs.pre-run.outputs.changed-json == 'true' && github.base_ref	== null
+    if: needs.pre-run.outputs.changed-json == 'true' && github.base_ref	!= null
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
