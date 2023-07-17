@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.6.4...HEAD)
+## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.6.5...HEAD)
+
+## [0.6.5](https://github.com/figuren-theater/code-quality/compare/0.6.4...0.6.5) - 2023-07-17
+
+### 🐛 Fixed
+
+- Fix: typo in path to phpstan ([#33](https://github.com/figuren-theater/code-quality/pull/33))
+- Fix: Call phpcs on . by default and handle cs and phpstan outputs with cs2pr ([#32](https://github.com/figuren-theater/code-quality/pull/32))
 
 ## [0.6.4](https://github.com/figuren-theater/code-quality/compare/0.6.3...0.6.4) - 2023-07-17
 
