@@ -42,11 +42,11 @@ See the workflow running for the figuren.theater platform
 |  4. |[ft-data](https://github.com/figuren-theater/ft-data)|   |
 |  5. | └── [ft-network-sourcelinks](https://github.com/figuren-theater/ft-network-sourcelinks)|   |
 |  6. |[ft-interactive](https://github.com/figuren-theater/ft-interactive)|   |
-|  7. |[ft-maintenance](https://github.com/figuren-theater/ft-maintenance)|   |
+|  7. |[ft-maintenance](https://github.com/figuren-theater/ft-maintenance)| [![Build, test & measure](https://github.com/figuren-theater/ft-maintenance/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-maintenance/actions/workflows/build-test-measure.yml)  |
 |  8. |[ft-media](https://github.com/figuren-theater/ft-media)|   |
 |  9. |[ft-onboarding](https://github.com/figuren-theater/ft-onboarding)|   |
 |  10.| ├── [ft-core-block-domaincheck](https://github.com/figuren-theater/ft-core-block-domaincheck)|   |
-|  11.| └── [install.php](https://github.com/figuren-theater/install.php/)| [![Build, test & measure](https://github.com/figuren-theater/install.php/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/install.php/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml) |
+|  11.| └── [install.php](https://github.com/figuren-theater/install.php/)| [![Build, test & measure](https://github.com/figuren-theater/install.php/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/install.php/actions/workflows/build-test-measure.yml) |
 |  12.|[ft-options](https://github.com/figuren-theater/ft-options)|   |
 |  13.|[ft-performance](https://github.com/figuren-theater/ft-performance)|   |
 |  14.|[ft-platform](https://github.com/figuren-theater/ft-platform/)| [![Build, test & measure](https://github.com/figuren-theater/ft-platform/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-platform/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml) |
@@ -69,7 +69,7 @@ See the workflow running for the figuren.theater platform
 
 1. Install via command line
     ```sh
-    composer require --dev figuren-theater/code-quality
+    composer require --dev figuren-theater/code-quality@*
     ```
 2. Create a [phpstan.neon](https://github.com/figuren-theater/new-ft-module/blob/main/phpstan.neon) file in the root of the repository
 
