@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.6.1...HEAD)
+## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.6.2...HEAD)
+
+## [0.6.2](https://github.com/figuren-theater/code-quality/compare/0.6.1...0.6.2) - 2023-07-17
+
+### 🐛 Fixed
+
+- Fix misleading changelog-compare URLs ([#29](https://github.com/figuren-theater/code-quality/pull/29))
 
 ## [0.6.1](https://github.com/figuren-theater/code-quality/compare/0.6.0...0.6.1) - 2023-07-17
 
