@@ -576,16 +576,16 @@
         },
         {
             "name": "figuren-theater/coding-standards",
-            "version": "0.3.0",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/figuren-theater/coding-standards.git",
-                "reference": "cf929e5b751094b2df24802e05cbf483df147622"
+                "reference": "e44b1012a35aeebc312f30c978eba132f7073cae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/figuren-theater/coding-standards/zipball/cf929e5b751094b2df24802e05cbf483df147622",
-                "reference": "cf929e5b751094b2df24802e05cbf483df147622",
+                "url": "https://api.github.com/repos/figuren-theater/coding-standards/zipball/e44b1012a35aeebc312f30c978eba132f7073cae",
+                "reference": "e44b1012a35aeebc312f30c978eba132f7073cae",
                 "shasum": ""
             },
             "require": {
@@ -612,6 +612,7 @@
             "description": "Coding standards for PHP, JavaScript and CSS within the figuren.theater WordPress Multisite network.",
             "homepage": "https://websites.fuer.figuren.theater",
             "keywords": [
+                "WordPressVIPMinimum",
                 "coding-standards",
                 "wordpress",
                 "wpcs"
@@ -621,7 +622,7 @@
                 "issues": "https://github.com/figuren-theater/coding-standards/issues",
                 "source": "https://github.com/figuren-theater/coding-standards"
             },
-            "time": "2023-07-11T12:21:47+00:00"
+            "time": "2023-07-17T18:22:06+00:00"
         },
         {
             "name": "figuren-theater/phpstan",
