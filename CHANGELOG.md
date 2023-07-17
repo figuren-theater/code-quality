@@ -2,7 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/.github/compare/0.6.0...HEAD)
+## [Unreleased](https://github.com/figuren-theater/.github/compare/0.6.1...HEAD)
+
+## [0.6.1](https://github.com/figuren-theater/.github/compare/0.6.0...0.6.1) - 2023-07-17
+
+- Make sure to use the latest version of coding-standards ([#28](https://github.com/figuren-theater/code-quality/pull/28))
 
 ## [0.6.0](https://github.com/figuren-theater/.github/compare/0.5.1...0.6.0) - 2023-07-15
 
