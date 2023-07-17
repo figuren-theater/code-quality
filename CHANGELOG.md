@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.6.3...HEAD)
+## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.6.4...HEAD)
+
+## [0.6.4](https://github.com/figuren-theater/code-quality/compare/0.6.3...0.6.4) - 2023-07-17
+
+### 🐛 Fixed
+
+- Fix: Make the opposite run ;) ([#31](https://github.com/figuren-theater/code-quality/pull/31))
 
 ## [0.6.3](https://github.com/figuren-theater/code-quality/compare/0.6.2...0.6.3) - 2023-07-17
 
