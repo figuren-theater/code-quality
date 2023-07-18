@@ -63,7 +63,7 @@ See the workflow running for the figuren.theater platform
 |  25.|[.github](https://github.com/figuren-theater/.github/)| [![Build, test & measure](https://github.com/figuren-theater/.github/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/.github/actions/workflows/build-test-measure.yml) |
 |  26.|[code-quality](https://github.com/figuren-theater/code-quality/)| [![Build, test & measure](https://github.com/figuren-theater/code-quality/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/code-quality/actions/workflows/build-test-measure.yml) |
 |  27.|[coding-standards](https://github.com/figuren-theater/coding-standards/)| [![Build, test & measure](https://github.com/figuren-theater/coding-standards/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/coding-standards/actions/workflows/build-test-measure.yml) |
-|  27.|[new-ft-module](https://github.com/figuren-theater/new-ft-module/)| [![Build, test & measure](https://github.com/figuren-theater/new-ft-module/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/new-ft-module/actions/workflows/build-test-measure.yml) |
+|  28.|[new-ft-module](https://github.com/figuren-theater/new-ft-module/)| [![Build, test & measure](https://github.com/figuren-theater/new-ft-module/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/new-ft-module/actions/workflows/build-test-measure.yml) |
 
 
 ## Install
@@ -73,6 +73,7 @@ See the workflow running for the figuren.theater platform
     composer require --dev figuren-theater/code-quality@*
     ```
 2. Create a [phpstan.neon](https://github.com/figuren-theater/new-ft-module/blob/main/phpstan.neon) file in the root of the repository
+3. Create a [.phpcs.xml](https://github.com/figuren-theater/new-ft-module/blob/main/.phpcs.xml) file in the root of the repository
 
 
 ## Usage
@@ -82,13 +83,16 @@ composer normalize
 ```
 ```sh
 vendor/bin/phpstan analyse -nvv
+```sh
+vendor/bin/phpcs . -v
 ```
 
 
 ## Built with & uses
 
   - [dependabot](/.github/dependabot.yml)
-  - [phpstan-wordpress](https://github.com/szepeviktor/phpstan-wordpress)
+  - [figuren-theater/coding-standards](https://github.com/figuren-theater/coding-standards/)
+  - [figuren-theater/phpstan](https://github.com/figuren-theater/phpstan/)
   - [composer normalize](https://github.com/ergebnis/composer-normalize)
 
 ## Contributing
@@ -107,7 +111,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## Versioning
 
-We use [Semantic Versioning](http://semver.org/) for versioning. For the versions
+We use [Semantic Versioning](http://semver.org/). For the versions
 available, see the [tags on this repository](https://github.com/figuren-theater/code-quality/tags).
 
 ## Authors
@@ -124,7 +128,7 @@ details
 
 ## Acknowledgments
 
-  - [@szepeviktor](https://github.com/szepeviktor) for all wonderful sharings over the last years especially
+  - [@szepeviktor](https://github.com/szepeviktor) for all wonderful sharings over the last years especially everything related coding-standards and semi-automated tests.
   - [altis](https://github.com/search?q=org%3Ahumanmade+altis) by humanmade, as our digital role model and inspiration
   - [@roborourke](https://github.com/roborourke) for his clear & understandable [coding guidelines](https://docs.altis-dxp.com/guides/code-review/standards/)
   - [python-project-template](https://github.com/rochacbruno/python-project-template) for their nice template->repo renaming workflow
