@@ -84,6 +84,7 @@ composer normalize
 ```
 ```sh
 vendor/bin/phpstan analyse -nvv
+```
 ```sh
 vendor/bin/phpcs . -v
 ```
