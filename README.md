@@ -58,7 +58,7 @@ See the workflow running for the figuren.theater platform
 |  20.|[ft-site-editing](https://github.com/figuren-theater/ft-site-editing)|   |
 |  21.| ├── [ft-network-block-editor](https://github.com/figuren-theater/ft-network-block-editor)|   |
 |  22.| └── [ft-network-block-patterns](https://github.com/figuren-theater/ft-network-block-patterns)|   |
-|  23.|[ft-themes](https://github.com/figuren-theater/ft-themes)|   |
+|  23.|[ft-themes](https://github.com/figuren-theater/ft-themes)|  [![Build, test & measure](https://github.com/figuren-theater/ft-themes/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-themes/actions/workflows/build-test-measure.yml) |
 |  24.|[ft-theming](https://github.com/figuren-theater/ft-theming)| [![Build, test & measure](https://github.com/figuren-theater/ft-theming/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-theming/actions/workflows/build-test-measure.yml)  |
 |  25.|[.github](https://github.com/figuren-theater/.github/)| [![Build, test & measure](https://github.com/figuren-theater/.github/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/.github/actions/workflows/build-test-measure.yml) |
 |  26.|[code-quality](https://github.com/figuren-theater/code-quality/)| [![Build, test & measure](https://github.com/figuren-theater/code-quality/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/code-quality/actions/workflows/build-test-measure.yml) |
@@ -84,6 +84,7 @@ composer normalize
 ```
 ```sh
 vendor/bin/phpstan analyse -nvv
+```
 ```sh
 vendor/bin/phpcs . -v
 ```
