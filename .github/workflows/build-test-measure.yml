@@ -169,5 +169,5 @@ jobs:
       - name: Static Analysis (PHPStan)
         run: |
           vendor/bin/phpstan --version
-          vendor/bin/phpstan analyse --error-format=checkstyle | cs2pr
+          vendor/bin/phpstan analyse . --error-format=checkstyle | cs2pr
         # vendor/bin/phpstan analyse -nvv ${{ needs.pre-run.outputs.changed-php_files }}
