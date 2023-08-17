@@ -55,7 +55,7 @@ See the workflow running for the figuren.theater platform
 |  17.|[ft-routes](https://github.com/figuren-theater/ft-routes)|  [![Build, test & measure](https://github.com/figuren-theater/ft-routes/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-routes/actions/workflows/build-test-measure.yml) |
 |  18.|[ft-security](https://github.com/figuren-theater/ft-security)|  [![Build, test & measure](https://github.com/figuren-theater/ft-security/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-security/actions/workflows/build-test-measure.yml) |
 |  19.|[ft-seo](https://github.com/figuren-theater/ft-seo)|   |
-|  20.|[ft-site-editing](https://github.com/figuren-theater/ft-site-editing)|   |
+|  20.|[ft-site-editing](https://github.com/figuren-theater/ft-site-editing)|  [![Build, test & measure](https://github.com/figuren-theater/ft-site-editing/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-site-editing/actions/workflows/build-test-measure.yml) |
 |  21.| ├── [ft-network-block-editor](https://github.com/figuren-theater/ft-network-block-editor)|   |
 |  22.| └── [ft-network-block-patterns](https://github.com/figuren-theater/ft-network-block-patterns)|   |
 |  23.|[ft-themes](https://github.com/figuren-theater/ft-themes)|  [![Build, test & measure](https://github.com/figuren-theater/ft-themes/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-themes/actions/workflows/build-test-measure.yml) |
