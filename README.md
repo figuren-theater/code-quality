@@ -36,7 +36,7 @@ See the workflow running for the figuren.theater platform
 
 ||Repo|Code Quality|
 |-:|-|-|
-|  1. |[ft-admin-ui](https://github.com/figuren-theater/ft-admin-ui/)| [![Build, test & measure](https://github.com/figuren-theater/ft-admin-ui/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-admin-ui/actions/workflows/required/figuren-theater/code-quality/.github/workflows/build-test-measure.yml) |
+|  1. |[ft-admin-ui](https://github.com/figuren-theater/ft-admin-ui/)| [![Build, test & measure](https://github.com/figuren-theater/ft-admin-ui/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-admin-ui/actions/workflows/build-test-measure.yml) |
 |  2. |[ft-core](https://github.com/figuren-theater/ft-core/)| [![Build, test & measure](https://github.com/figuren-theater/ft-core/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-core/actions/workflows/build-test-measure.yml) |
 |  3. |[ft-coresites](https://github.com/figuren-theater/ft-coresites)|   |
 |  4. |[ft-data](https://github.com/figuren-theater/ft-data)|   |
