@@ -51,7 +51,7 @@ See the workflow running for the figuren.theater platform
 |  13.|[ft-performance](https://github.com/figuren-theater/ft-performance)|   |
 |  14.|[ft-platform](https://github.com/figuren-theater/ft-platform/)| [![Build, test & measure](https://github.com/figuren-theater/ft-platform/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-platform/actions/workflows/build-test-measure.yml) |
 |  15.|[ft-platform-collection](https://github.com/figuren-theater/ft-platform-collection/)| [![Build, test & measure](https://github.com/figuren-theater/ft-platform-collection/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-platform-collection/actions/workflows/build-test-measure.yml) |
-|  16.|[ft-privacy](https://github.com/figuren-theater/ft-privacy)|   |
+|  16.|[ft-privacy](https://github.com/figuren-theater/ft-privacy)|  [![Build, test & measure](https://github.com/figuren-theater/ft-privacy/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-privacy/actions/workflows/build-test-measure.yml) |
 |  17.|[ft-routes](https://github.com/figuren-theater/ft-routes)|  [![Build, test & measure](https://github.com/figuren-theater/ft-routes/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-routes/actions/workflows/build-test-measure.yml) |
 |  18.|[ft-security](https://github.com/figuren-theater/ft-security)|  [![Build, test & measure](https://github.com/figuren-theater/ft-security/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-security/actions/workflows/build-test-measure.yml) |
 |  19.|[ft-seo](https://github.com/figuren-theater/ft-seo)|   |
