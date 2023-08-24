@@ -47,7 +47,7 @@ See the workflow running for the figuren.theater platform
 |  9. |[ft-onboarding](https://github.com/figuren-theater/ft-onboarding)|   |
 |  10.| ├── [ft-core-block-domaincheck](https://github.com/figuren-theater/ft-core-block-domaincheck)|   |
 |  11.| └── [install.php](https://github.com/figuren-theater/install.php/)| [![Build, test & measure](https://github.com/figuren-theater/install.php/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/install.php/actions/workflows/build-test-measure.yml) |
-|  12.|[ft-options](https://github.com/figuren-theater/ft-options)|   |
+|  12.|[ft-options](https://github.com/figuren-theater/ft-options)|  [![Build, test & measure](https://github.com/figuren-theater/ft-options/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-options/actions/workflows/build-test-measure.yml) |
 |  13.|[ft-performance](https://github.com/figuren-theater/ft-performance)|   |
 |  14.|[ft-platform](https://github.com/figuren-theater/ft-platform/)| [![Build, test & measure](https://github.com/figuren-theater/ft-platform/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-platform/actions/workflows/build-test-measure.yml) |
 |  15.|[ft-platform-collection](https://github.com/figuren-theater/ft-platform-collection/)| [![Build, test & measure](https://github.com/figuren-theater/ft-platform-collection/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-platform-collection/actions/workflows/build-test-measure.yml) |
