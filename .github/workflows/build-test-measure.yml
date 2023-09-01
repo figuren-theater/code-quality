@@ -100,7 +100,9 @@ jobs:
   lint-php:
     name: 'Lint: PHP'
     needs: pre-run
-    if: needs.pre-run.outputs.changed-php == 'true'
+    # only run for changed .php files AND when it is a pull_request
+    # because 'github.base_ref' will not be available on push
+    if: needs.pre-run.outputs.changed-php == 'true' && github.base_ref	!= null
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -137,7 +139,9 @@ jobs:
     name: 'Static Analysis: PHP'
     runs-on: ubuntu-latest
     needs: pre-run
-    if: needs.pre-run.outputs.changed-php == 'true'
+    # only run for changed .php files AND when it is a pull_request
+    # because 'github.base_ref' will not be available on push
+    if: needs.pre-run.outputs.changed-php == 'true' && github.base_ref	!= null
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -170,4 +174,3 @@ jobs:
         run: |
           vendor/bin/phpstan --version
           vendor/bin/phpstan analyse . --error-format=checkstyle | cs2pr
-        # vendor/bin/phpstan analyse -nvv ${{ needs.pre-run.outputs.changed-php_files }}
