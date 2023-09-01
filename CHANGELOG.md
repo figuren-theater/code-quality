@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.6.7...HEAD)
+## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.7.0...HEAD)
+
+## [0.7.0](https://github.com/figuren-theater/code-quality/compare/0.6.7...0.7.0) - 2023-09-01
+
+### 🚀 Added
+
+- Update dependencies ([#51](https://github.com/figuren-theater/code-quality/pull/51))
+- Update 'Build, test & measure' status badge for ft-media ([#50](https://github.com/figuren-theater/code-quality/pull/50))
 
 ## [0.6.7](https://github.com/figuren-theater/code-quality/compare/0.6.6...0.6.7) - 2023-08-25
 
