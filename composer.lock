@@ -626,21 +626,24 @@
         },
         {
             "name": "figuren-theater/phpstan",
-            "version": "1.1.2",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/figuren-theater/phpstan.git",
-                "reference": "b4e7fffb5b43e24f5de9f21e53f2c3df2023ed82"
+                "reference": "64f11fa3c465f4f33fed82b24f175f550dbbabee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/figuren-theater/phpstan/zipball/b4e7fffb5b43e24f5de9f21e53f2c3df2023ed82",
-                "reference": "b4e7fffb5b43e24f5de9f21e53f2c3df2023ed82",
+                "url": "https://api.github.com/repos/figuren-theater/phpstan/zipball/64f11fa3c465f4f33fed82b24f175f550dbbabee",
+                "reference": "64f11fa3c465f4f33fed82b24f175f550dbbabee",
                 "shasum": ""
             },
             "require": {
                 "php-stubs/wordpress-globals": "^0.2.0",
                 "szepeviktor/phpstan-wordpress": "^1.3"
+            },
+            "require-dev": {
+                "ergebnis/composer-normalize": "^2.31"
             },
             "type": "phpstan-extension",
             "extra": {
@@ -669,6 +672,7 @@
             "description": "org-wide used phpstan.neon file for the WordPress Multisite network for puppeteers figuren.theater",
             "homepage": "https://figuren.theater",
             "keywords": [
+                "PHPStan",
                 "wordpress"
             ],
             "support": {
@@ -676,7 +680,7 @@
                 "issues": "https://github.com/figuren-theater/phpstan/issues",
                 "source": "https://github.com/figuren-theater/phpstan"
             },
-            "time": "2023-09-01T22:15:08+00:00"
+            "time": "2023-09-12T21:56:29+00:00"
         },
         {
             "name": "humanmade/coding-standards",
