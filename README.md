@@ -62,9 +62,13 @@ See the workflow running for the figuren.theater platform
 |  24.|[ft-theming](https://github.com/figuren-theater/ft-theming)| [![Build, test & measure](https://github.com/figuren-theater/ft-theming/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-theming/actions/workflows/build-test-measure.yml)  |
 |  25.|[.github](https://github.com/figuren-theater/.github/)| [![Build, test & measure](https://github.com/figuren-theater/.github/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/.github/actions/workflows/build-test-measure.yml) |
 |  26.|[code-quality](https://github.com/figuren-theater/code-quality/)| [![Build, test & measure](https://github.com/figuren-theater/code-quality/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/code-quality/actions/workflows/build-test-measure.yml) |
-|  27.| ├── [phpstan](https://github.com/figuren-theater/phpstan)|   |
+|  27.| ├── [phpstan](https://github.com/figuren-theater/phpstan)|  *(No Build, no tests :)* |
 |  28.| └── [coding-standards](https://github.com/figuren-theater/coding-standards/)| [![Build, test & measure](https://github.com/figuren-theater/coding-standards/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/coding-standards/actions/workflows/build-test-measure.yml) |
 |  29.|[new-ft-module](https://github.com/figuren-theater/new-ft-module/)| [![Build, test & measure](https://github.com/figuren-theater/new-ft-module/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/new-ft-module/actions/workflows/build-test-measure.yml) |
+|  30.|[status.figuren.theater](https://github.com/figuren-theater/status.figuren.theater)|   |
+|  31.|[BLOGS](https://github.com/figuren-theater/BLOGS)|   |
+|  32.| ├── [websites.fuer.figuren.theater/demos](https://github.com/figuren-theater/websites.fuer.figuren.theater-demos)|   |
+|  33.| └── [katharina-muschiol.de](https://github.com/figuren-theater/katharina-muschiol.de/)|  |
 
 
 ## Install
