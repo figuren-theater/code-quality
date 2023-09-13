@@ -626,16 +626,16 @@
         },
         {
             "name": "figuren-theater/phpstan",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/figuren-theater/phpstan.git",
-                "reference": "64f11fa3c465f4f33fed82b24f175f550dbbabee"
+                "reference": "84efb2a022e3e67edb25a1f8f90fb130ab7fda86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/figuren-theater/phpstan/zipball/64f11fa3c465f4f33fed82b24f175f550dbbabee",
-                "reference": "64f11fa3c465f4f33fed82b24f175f550dbbabee",
+                "url": "https://api.github.com/repos/figuren-theater/phpstan/zipball/84efb2a022e3e67edb25a1f8f90fb130ab7fda86",
+                "reference": "84efb2a022e3e67edb25a1f8f90fb130ab7fda86",
                 "shasum": ""
             },
             "require": {
@@ -680,7 +680,7 @@
                 "issues": "https://github.com/figuren-theater/phpstan/issues",
                 "source": "https://github.com/figuren-theater/phpstan"
             },
-            "time": "2023-09-12T21:56:29+00:00"
+            "time": "2023-09-13T08:54:26+00:00"
         },
         {
             "name": "humanmade/coding-standards",
