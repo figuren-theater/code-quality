@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.7.0...HEAD)
+## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.7.1...HEAD)
+
+## [0.7.1](https://github.com/figuren-theater/code-quality/compare/0.7.0...0.7.1) - 2023-09-13
+
+### Dependency Updates & Maintenance
+
+- Upgrading (*)/phpstan dependencies ([#53](https://github.com/figuren-theater/code-quality/pull/53))
 
 ## [0.7.0](https://github.com/figuren-theater/code-quality/compare/0.6.7...0.7.0) - 2023-09-01
 
