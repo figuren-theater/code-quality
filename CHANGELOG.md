@@ -2,7 +2,84 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.6.1...HEAD)
+## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.8.0...HEAD)
+
+## [0.8.0](https://github.com/figuren-theater/code-quality/compare/0.7.1...0.8.0) - 2023-09-26
+
+### 🚀 Added
+
+- Enable automated JS & CSS checks ([#56](https://github.com/figuren-theater/code-quality/pull/56))
+
+## [0.7.1](https://github.com/figuren-theater/code-quality/compare/0.7.0...0.7.1) - 2023-09-13
+
+### Dependency Updates & Maintenance
+
+- Upgrading (*)/phpstan dependencies ([#53](https://github.com/figuren-theater/code-quality/pull/53))
+
+## [0.7.0](https://github.com/figuren-theater/code-quality/compare/0.6.7...0.7.0) - 2023-09-01
+
+### 🚀 Added
+
+- Update dependencies ([#51](https://github.com/figuren-theater/code-quality/pull/51))
+- Update 'Build, test & measure' status badge for ft-media ([#50](https://github.com/figuren-theater/code-quality/pull/50))
+
+## [0.6.7](https://github.com/figuren-theater/code-quality/compare/0.6.6...0.6.7) - 2023-08-25
+
+### 🚀 Added
+
+- Update 'Build, test & measure' status badge for ft-options ([#48](https://github.com/figuren-theater/code-quality/pull/48))
+- Update 'Build, test & measure' status badge for ft-privacy ([#47](https://github.com/figuren-theater/code-quality/pull/47))
+- Update 'Build, test & measure' status badge for ft-site-editing ([#46](https://github.com/figuren-theater/code-quality/pull/46))
+- Update 'Build, test & measure' status badge for ft-interactive ([#45](https://github.com/figuren-theater/code-quality/pull/45))
+- Update 'Build, test & measure' status badge for ft-admin-ui ([#44](https://github.com/figuren-theater/code-quality/pull/44))
+- Update 'Build, test & measure' status badge for ft-security ([#43](https://github.com/figuren-theater/code-quality/pull/43))
+- Update 'Build, test & measure' status badge for ft-platform-collection ([#41](https://github.com/figuren-theater/code-quality/pull/41))
+- Update 'Build, test & measure' status badge for ft-themes ([#39](https://github.com/figuren-theater/code-quality/pull/39))
+- Add more meaningfull description ([#38](https://github.com/figuren-theater/code-quality/pull/38))
+- Update 'Build, test & measure' status badge for ft-routes ([#37](https://github.com/figuren-theater/code-quality/pull/37))
+- Update 'Build, test & measure' status badge for ft-theming ([#35](https://github.com/figuren-theater/code-quality/pull/35))
+- Update 'Build, test & measure' status badge for coding-standards ([#36](https://github.com/figuren-theater/code-quality/pull/36))
+
+### 🐛 Fixed
+
+- Fix wrong badges and links for workflow runs ([#42](https://github.com/figuren-theater/code-quality/pull/42))
+- Fix prevent error on missing path for phpstan analyze command, introduced after phpstan 1.10.25 ([#40](https://github.com/figuren-theater/code-quality/pull/40))
+
+### Dependency Updates & Maintenance
+
+- Upgrading figuren-theater/coding-standards (0.3.1 => 0.3.3) ([#49](https://github.com/figuren-theater/code-quality/pull/49))
+- Bump actions/dependency-review-action from 2 to 3 ([#26](https://github.com/figuren-theater/code-quality/pull/26))
+
+## [0.6.6](https://github.com/figuren-theater/code-quality/compare/0.6.5...0.6.6) - 2023-07-17
+
+### Dependency Updates & Maintenance
+
+- Upgrading figuren-theater/coding-standards ([#34](https://github.com/figuren-theater/code-quality/pull/34))
+
+## [0.6.5](https://github.com/figuren-theater/code-quality/compare/0.6.4...0.6.5) - 2023-07-17
+
+### 🐛 Fixed
+
+- Fix: typo in path to phpstan ([#33](https://github.com/figuren-theater/code-quality/pull/33))
+- Fix: Call phpcs on . by default and handle cs and phpstan outputs with cs2pr ([#32](https://github.com/figuren-theater/code-quality/pull/32))
+
+## [0.6.4](https://github.com/figuren-theater/code-quality/compare/0.6.3...0.6.4) - 2023-07-17
+
+### 🐛 Fixed
+
+- Fix: Make the opposite run ;) ([#31](https://github.com/figuren-theater/code-quality/pull/31))
+
+## [0.6.3](https://github.com/figuren-theater/code-quality/compare/0.6.2...0.6.3) - 2023-07-17
+
+### 🐛 Fixed
+
+- Only run 'Lint: json files' for changed .json files AND when it is a … ([#30](https://github.com/figuren-theater/code-quality/pull/30))
+
+## [0.6.2](https://github.com/figuren-theater/code-quality/compare/0.6.1...0.6.2) - 2023-07-17
+
+### 🐛 Fixed
+
+- Fix misleading changelog-compare URLs ([#29](https://github.com/figuren-theater/code-quality/pull/29))
 
 ## [0.6.1](https://github.com/figuren-theater/code-quality/compare/0.6.0...0.6.1) - 2023-07-17
 
