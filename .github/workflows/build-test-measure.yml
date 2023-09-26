@@ -159,8 +159,8 @@ jobs:
 
       - name: Detect ESLint coding standard violations
         if: >
-          github.event.pull_request.head.repo.fork == true ||
-          github.event.pull_request.user.login == 'dependabot[bot]'
+          !( github.event.pull_request.head.repo.fork == true ||
+          github.event.pull_request.user.login == 'dependabot[bot]' )
         run: npm run lint:js
 
       - name: Generate ESLint coding standard violations report
