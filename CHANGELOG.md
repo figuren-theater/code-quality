@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.7.1...HEAD)
+## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.8.0...HEAD)
+
+## [0.8.0](https://github.com/figuren-theater/code-quality/compare/0.7.1...0.8.0) - 2023-09-26
+
+### 🚀 Added
+
+- Enable automated JS & CSS checks ([#56](https://github.com/figuren-theater/code-quality/pull/56))
 
 ## [0.7.1](https://github.com/figuren-theater/code-quality/compare/0.7.0...0.7.1) - 2023-09-13
 
