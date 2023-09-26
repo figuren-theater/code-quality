@@ -14,6 +14,7 @@ jobs:
       changed-php: ${{ steps.filter.outputs.php }}
       changed-php_files: ${{ steps.filter.outputs.php_files }}
       changed-json: ${{ steps.filter.outputs.json }}
+      changed-js: ${{ steps.filter.outputs.js }}
     steps:
       - uses: actions/checkout@v3
 
@@ -94,6 +95,58 @@ jobs:
 
       - name: Normalize composer.json
         run: composer normalize --dry-run
+
+  #-----------------------------------------------------------------------------------------------------------------------
+
+  lint-js:
+    name: 'Lint: JS'
+    needs: pre-run
+    # only run for changed .php files AND when it is a pull_request
+    # because 'github.base_ref' will not be available on push
+    if: needs.pre-run.outputs.changed-js == 'true' && github.base_ref	!= null
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v3.8.1
+        with:
+          # use the same version like WordPress/gutenberg
+          node-version: '16'
+          cache: npm
+
+      - name: Install Node dependencies
+        run: npm ci
+        env:
+          CI: true
+
+      - name: Validate package.json
+        run: npm run lint:pkg-json
+
+      - name: Detect ESLint coding standard violations
+        if: >
+          github.event.pull_request.head.repo.fork == true ||
+          github.event.pull_request.user.login == 'dependabot[bot]'
+        run: npm run lint:js
+
+      - name: Generate ESLint coding standard violations report
+        # Prevent generating the ESLint report if PR is from a fork or authored by Dependabot.
+        if: >
+          ! ( github.event.pull_request.head.repo.fork == true ||
+          github.event.pull_request.user.login == 'dependabot[bot]' )
+        run: npm run lint:js:report
+        continue-on-error: true
+
+      - name: Annotate code linting results
+        # The action cannot annotate the PR when run from a PR fork or was authored by Dependabot.
+        if: >
+          ! ( github.event.pull_request.head.repo.fork == true ||
+          github.event.pull_request.user.login == 'dependabot[bot]' )
+        uses: ataylorme/eslint-annotate-action@1.2.0
+        with:
+          repo-token: '${{ secrets.BOT_TOKEN }}'
+          report-json: 'lint-js-report.json'
 
   #-----------------------------------------------------------------------------------------------------------------------
 
