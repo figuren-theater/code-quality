@@ -15,6 +15,7 @@ jobs:
       changed-php_files: ${{ steps.filter.outputs.php_files }}
       changed-json: ${{ steps.filter.outputs.json }}
       changed-js: ${{ steps.filter.outputs.js }}
+      changed-css: ${{ steps.filter.outputs.css }}
     steps:
       - uses: actions/checkout@v3
 
@@ -45,7 +46,8 @@ jobs:
               - added|modified: '**/*.json'
             yml:
               - added|modified: '**/*.yml'
-            scss:
+            css:
+              - added|modified: '**/*.css'
               - added|modified: '**/*.scss'
             php:
               - added|modified: '**/*.php'
@@ -97,6 +99,37 @@ jobs:
         run: composer normalize --dry-run
 
   #-----------------------------------------------------------------------------------------------------------------------
+
+  lint-css:
+    name: 'Lint: CSS'
+    needs: pre-run
+    # only run for changed .php files AND when it is a pull_request
+    # because 'github.base_ref' will not be available on push
+    if: needs.pre-run.outputs.changed-css == 'true' && github.base_ref	!= null
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v3.8.1
+        with:
+          # use the same version like WordPress/gutenberg
+          node-version: '16'
+          cache: npm
+
+      - name: Install Node dependencies
+        run: npm ci
+        env:
+          CI: true
+
+      - name: Validate package.json
+        run: npm run lint:pkg-json
+
+      - name: Detect CSS coding standard violations
+        run: npm run lint:css
+
+    #-----------------------------------------------------------------------------------------------------------------------
 
   lint-js:
     name: 'Lint: JS'
