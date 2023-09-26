@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.8.0...HEAD)
+## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.8.1...HEAD)
+
+## [0.8.1](https://github.com/figuren-theater/code-quality/compare/0.8.0...0.8.1) - 2023-09-26
+
+### 🐛 Fixed
+
+- Fix JS liniting workflow not running properly ([#57](https://github.com/figuren-theater/code-quality/pull/57))
 
 ## [0.8.0](https://github.com/figuren-theater/code-quality/compare/0.7.1...0.8.0) - 2023-09-26
 
