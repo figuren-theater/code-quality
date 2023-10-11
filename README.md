@@ -58,17 +58,20 @@ See the workflow running for the figuren.theater platform
 |  20.|[ft-site-editing](https://github.com/figuren-theater/ft-site-editing)|  [![Build, test & measure](https://github.com/figuren-theater/ft-site-editing/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-site-editing/actions/workflows/build-test-measure.yml) |
 |  21.| ├── [ft-network-block-editor](https://github.com/figuren-theater/ft-network-block-editor)|  [![Build, test & measure](https://github.com/figuren-theater/ft-network-block-editor/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-network-block-editor/actions/workflows/build-test-measure.yml) |
 |  22.| └── [ft-network-block-patterns](https://github.com/figuren-theater/ft-network-block-patterns)|   |
-|  23.|[ft-themes](https://github.com/figuren-theater/ft-themes)|  [![Build, test & measure](https://github.com/figuren-theater/ft-themes/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-themes/actions/workflows/build-test-measure.yml) |
-|  24.|[ft-theming](https://github.com/figuren-theater/ft-theming)| [![Build, test & measure](https://github.com/figuren-theater/ft-theming/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-theming/actions/workflows/build-test-measure.yml)  |
-|  25.|[.github](https://github.com/figuren-theater/.github/)| [![Build, test & measure](https://github.com/figuren-theater/.github/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/.github/actions/workflows/build-test-measure.yml) |
-|  26.|[code-quality](https://github.com/figuren-theater/code-quality/)| [![Build, test & measure](https://github.com/figuren-theater/code-quality/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/code-quality/actions/workflows/build-test-measure.yml) |
-|  27.| ├── [phpstan](https://github.com/figuren-theater/phpstan)|  *(No Build, no tests :)* |
-|  28.| └── [coding-standards](https://github.com/figuren-theater/coding-standards/)| [![Build, test & measure](https://github.com/figuren-theater/coding-standards/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/coding-standards/actions/workflows/build-test-measure.yml) |
-|  29.|[new-ft-module](https://github.com/figuren-theater/new-ft-module/)| [![Build, test & measure](https://github.com/figuren-theater/new-ft-module/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/new-ft-module/actions/workflows/build-test-measure.yml) |
-|  30.|[status.figuren.theater](https://github.com/figuren-theater/status.figuren.theater)|   |
-|  31.|[BLOGS](https://github.com/figuren-theater/BLOGS)|   |
-|  32.| ├── [websites.fuer.figuren.theater/demos](https://github.com/figuren-theater/websites.fuer.figuren.theater-demos)|   |
-|  33.| └── [katharina-muschiol.de](https://github.com/figuren-theater/katharina-muschiol.de/)|  |
+|  23.|[ft-theater](https://github.com/figuren-theater/ft-theater)|  [![Build, test & measure](https://github.com/figuren-theater/ft-theater/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-theater/actions/workflows/build-test-measure.yml) |
+|  24.| ├── [label-printing](https://github.com/figuren-theater/label-printing)|  [![Build, test & measure](https://github.com/figuren-theater/label-printing/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/label-printing/actions/workflows/build-test-measure.yml) |
+|  25.| └── [theater-production-blocks](https://github.com/figuren-theater/theater-production-blocks)|  [![Build, test & measure](https://github.com/figuren-theater/theater-production-blocks/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/theater-production-blocks/actions/workflows/build-test-measure.yml) |
+|  26.|[ft-themes](https://github.com/figuren-theater/ft-themes)|  [![Build, test & measure](https://github.com/figuren-theater/ft-themes/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-themes/actions/workflows/build-test-measure.yml) |
+|  27.|[ft-theming](https://github.com/figuren-theater/ft-theming)| [![Build, test & measure](https://github.com/figuren-theater/ft-theming/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/ft-theming/actions/workflows/build-test-measure.yml)  |
+|  28.|[.github](https://github.com/figuren-theater/.github/)| [![Build, test & measure](https://github.com/figuren-theater/.github/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/.github/actions/workflows/build-test-measure.yml) |
+|  29.|[code-quality](https://github.com/figuren-theater/code-quality/)| [![Build, test & measure](https://github.com/figuren-theater/code-quality/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/code-quality/actions/workflows/build-test-measure.yml) |
+|  30.| ├── [phpstan](https://github.com/figuren-theater/phpstan)|  *(No Build, no tests :)* |
+|  31.| └── [coding-standards](https://github.com/figuren-theater/coding-standards/)| [![Build, test & measure](https://github.com/figuren-theater/coding-standards/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/coding-standards/actions/workflows/build-test-measure.yml) |
+|  32.|[new-ft-module](https://github.com/figuren-theater/new-ft-module/)| [![Build, test & measure](https://github.com/figuren-theater/new-ft-module/actions/workflows/build-test-measure.yml/badge.svg)](https://github.com/figuren-theater/new-ft-module/actions/workflows/build-test-measure.yml) |
+|  33.|[status.figuren.theater](https://github.com/figuren-theater/status.figuren.theater)|   |
+|  34.|[BLOGS](https://github.com/figuren-theater/BLOGS)|   |
+|  35.| ├── [websites.fuer.figuren.theater/demos](https://github.com/figuren-theater/websites.fuer.figuren.theater-demos)|   |
+|  36.| └── [katharina-muschiol.de](https://github.com/figuren-theater/katharina-muschiol.de/)|  |
 
 
 ## Install
