@@ -17,7 +17,7 @@ jobs:
       changed-js: ${{ steps.filter.outputs.js }}
       changed-css: ${{ steps.filter.outputs.css }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
         # Checks to see if any files in the PR match one of the listed file types.
         # We can use this filter to decide whether or not to run linters or tests.
@@ -63,7 +63,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Get Composer Cache Directory
         id: composer-cache
@@ -129,7 +129,7 @@ jobs:
       - name: Detect CSS coding standard violations
         run: npm run lint:css
 
-    #-----------------------------------------------------------------------------------------------------------------------
+  #-----------------------------------------------------------------------------------------------------------------------
 
   lint-js:
     name: 'Lint: JS'
@@ -192,12 +192,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.0
+          php-version: 8.1
           coverage: none
           tools: cs2pr
 
@@ -230,13 +230,13 @@ jobs:
     if: needs.pre-run.outputs.changed-php == 'true' && github.base_ref	!= null
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           # phpstan requires PHP 7.1+.
-          php-version: 8.0
+          php-version: 8.1
           extensions: dom, iconv, json, libxml, zip
           coverage: none
           tools: cs2pr
