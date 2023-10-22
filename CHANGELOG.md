@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.8.1...HEAD)
+## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.9.0...HEAD)
+
+## [0.9.0](https://github.com/figuren-theater/code-quality/compare/0.8.1...0.9.0) - 2023-10-22
+
+### 🚀 Added
+
+- Update required php-version to be 8.1 (matching PRODUCTION) ([#60](https://github.com/figuren-theater/code-quality/pull/60))
+- Update 'Build, test & measure' status badge for label-printing & theater-production-blocks ([#58](https://github.com/figuren-theater/code-quality/pull/58))
 
 ## [0.8.1](https://github.com/figuren-theater/code-quality/compare/0.8.0...0.8.1) - 2023-09-26
 
