@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.9.0...HEAD)
 
+*TEST*: Trigger status-checks during a new PR ...
+
+
 ## [0.9.0](https://github.com/figuren-theater/code-quality/compare/0.8.1...0.9.0) - 2023-10-22
 
 ### 🚀 Added
