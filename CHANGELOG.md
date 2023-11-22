@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/code-quality/compare/0.9.0...HEAD)
+## [Unreleased](https://github.com/figuren-theater/code-quality/compare/1.0.0...HEAD)
+
+## [1.0.0](https://github.com/figuren-theater/code-quality/compare/0.9.0...1.0.0) - 2023-11-22
+
+### Dependency Updates & Maintenance
+
+- Bump actions/setup-node from 3.8.1 to 4.0.0 ([#61](https://github.com/figuren-theater/code-quality/pull/61))
+- Upgrading figuren-theater/coding-standards ([#62](https://github.com/figuren-theater/code-quality/pull/62)) which includes the switch to the **NEW WordPress coding-Standards Version 3.0.x**
 
 ## [0.9.0](https://github.com/figuren-theater/code-quality/compare/0.8.1...0.9.0) - 2023-10-22
 
