@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/code-quality/compare/1.0.0...HEAD)
+## [Unreleased](https://github.com/figuren-theater/code-quality/compare/1.0.1...HEAD)
+
+## [1.0.1](https://github.com/figuren-theater/code-quality/compare/1.0.0...1.0.1) - 2023-12-15
+
+### 🚀 Added
+
+- Finetuning the PHPCS output ([#65](https://github.com/figuren-theater/code-quality/pull/65))
 
 ## [1.0.0](https://github.com/figuren-theater/code-quality/compare/0.9.0...1.0.0) - 2023-11-22
 
