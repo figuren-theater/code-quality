@@ -2,7 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/code-quality/compare/1.0.1...HEAD)
+## [Unreleased](https://github.com/figuren-theater/code-quality/compare/1.1.0...HEAD)
+
+## [1.1.0](https://github.com/figuren-theater/code-quality/compare/1.0.1...1.1.0) - 2024-02-14
+
+### 🚀 Added
+
+- Upgrading figuren-theater/coding-standards (0.4.1 => 0.4.2) ([#75](https://github.com/figuren-theater/code-quality/pull/75))
+- Add 'Build, test & measure' status badge for figuren-theater/theater-production-subsites ([#74](https://github.com/figuren-theater/code-quality/pull/74))
+- Add 'Build, test & measure' status badge for ft-network-block-patterns ([#71](https://github.com/figuren-theater/code-quality/pull/71))
+
+### Dependency Updates & Maintenance
+
+- Bump actions/cache from 3 to 4 ([#67](https://github.com/figuren-theater/code-quality/pull/67))
+- Bump actions/dependency-review-action from 3 to 4 ([#68](https://github.com/figuren-theater/code-quality/pull/68))
+- Bump dorny/paths-filter from 2.11.1 to 3.0.0 ([#69](https://github.com/figuren-theater/code-quality/pull/69))
+- Bump ergebnis/composer-normalize from 2.39.0 to 2.42.0 ([#70](https://github.com/figuren-theater/code-quality/pull/70))
+- Bump actions/setup-node from 4.0.0 to 4.0.2 ([#72](https://github.com/figuren-theater/code-quality/pull/72))
 
 ## [1.0.1](https://github.com/figuren-theater/code-quality/compare/1.0.0...1.0.1) - 2023-12-15
 
