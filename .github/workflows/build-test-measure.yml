@@ -25,7 +25,7 @@ jobs:
         # if: ${{ steps.filter.outputs.md == 'true' }}
         # This will return true if there's a markdown file that was changed
         # in the PR.
-      - uses: dorny/paths-filter@v3.0.1
+      - uses: dorny/paths-filter@v3.0.2
         id: filter
         # run: echo "{changed-php}=${{ steps.filter.outputs.php }}" >> $GITHUB_OUTPUT
         with:
