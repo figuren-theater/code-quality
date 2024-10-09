@@ -2,7 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/code-quality/compare/1.1.1...HEAD)
+## [Unreleased](https://github.com/figuren-theater/code-quality/compare/1.2.1...HEAD)
+
+## [1.2.1](https://github.com/figuren-theater/code-quality/compare/1.1.1...1.2.1) - 2024-10-09
+
+- Update Plugin Check action name ([#87](https://github.com/figuren-theater/code-quality/pull/87))
+
+### 🚀 Added
+
+- Prevent triggering wp-plugin-checks on every push and pr ([#90](https://github.com/figuren-theater/code-quality/pull/90))
+- NEW "WP Plugin Check" action (swissspidy/wp-plugin-check-action) ([#82](https://github.com/figuren-theater/code-quality/pull/82))
+- Add 'Build, test & measure' status badge for figuren-theater/ft-onboarding ([#80](https://github.com/figuren-theater/code-quality/pull/80))
+- Add  'Build, test & measure' status badge for figuren-theater/ft-seo ([#79](https://github.com/figuren-theater/code-quality/pull/79))
+
+### Dependency Updates & Maintenance
+
+- Bump phpstan/extension-installer from 1.3.1 to 1.4.3 ([#89](https://github.com/figuren-theater/code-quality/pull/89))
+- Bump ataylorme/eslint-annotate-action from 2.2.0 to 3.0.0 ([#84](https://github.com/figuren-theater/code-quality/pull/84))
+- Bump ergebnis/composer-normalize from 2.42.0 to 2.43.0 ([#86](https://github.com/figuren-theater/code-quality/pull/86))
+- Bump actions/setup-node from 4.0.2 to 4.0.3 ([#88](https://github.com/figuren-theater/code-quality/pull/88))
+- Bump dealerdirect/phpcodesniffer-composer-installer from 0.7.2 to 1.0.0 ([#77](https://github.com/figuren-theater/code-quality/pull/77))
+- Bump dorny/paths-filter from 3.0.1 to 3.0.2 ([#81](https://github.com/figuren-theater/code-quality/pull/81))
+- Bump dorny/paths-filter from 3.0.0 to 3.0.1 ([#78](https://github.com/figuren-theater/code-quality/pull/78))
 
 ## [1.1.1](https://github.com/figuren-theater/code-quality/compare/1.1.0...1.1.1) - 2024-02-15
 
