@@ -32,7 +32,7 @@
 		"ergebnis/composer-normalize": "2.43.0",
 		"figuren-theater/coding-standards": "*",
 		"figuren-theater/phpstan": "*",
-		"phpstan/extension-installer": "1.3.1"
+		"phpstan/extension-installer": "1.4.3"
 	},
 	"config": {
 		"allow-plugins": {
