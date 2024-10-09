@@ -2,11 +2,7 @@ name: 'WordPress plugin checks'
 
 on:
   workflow_call:
-  pull_request:
-  push:
-    branches:
-    - main
-    - 'releases/*'
+  workflow_dispatch:
 
 jobs:
   test:
