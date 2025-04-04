@@ -2,7 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/code-quality/compare/1.2.1...HEAD)
+## [Unreleased](https://github.com/figuren-theater/code-quality/compare/1.2.2...HEAD)
+
+## [1.2.2](https://github.com/figuren-theater/code-quality/compare/1.2.1...1.2.2) - 2025-04-04
+
+### Dependency Updates & Maintenance
+
+- Bump ergebnis/composer-normalize from 2.44.0 to 2.45.0 ([#95](https://github.com/figuren-theater/code-quality/pull/95))
+- Bump actions/setup-node from 4.2.0 to 4.3.0 ([#97](https://github.com/figuren-theater/code-quality/pull/97))
+- Bump actions/setup-node from 4.1.0 to 4.2.0 ([#96](https://github.com/figuren-theater/code-quality/pull/96))
+- Bump actions/setup-node from 4.0.4 to 4.1.0 ([#94](https://github.com/figuren-theater/code-quality/pull/94))
+- Bump figuren-theater/phpstan from 1.2.2 to 1.2.3 ([#92](https://github.com/figuren-theater/code-quality/pull/92))
+- Bump ergebnis/composer-normalize from 2.43.0 to 2.44.0 ([#93](https://github.com/figuren-theater/code-quality/pull/93))
+- Bump actions/setup-node from 4.0.3 to 4.0.4 ([#91](https://github.com/figuren-theater/code-quality/pull/91))
 
 ## [1.2.1](https://github.com/figuren-theater/code-quality/compare/1.1.1...1.2.1) - 2024-10-09
 
