@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased](https://github.com/figuren-theater/code-quality/compare/1.2.2...HEAD)
+## [Unreleased](https://github.com/figuren-theater/code-quality/compare/2.0.0...HEAD)
+
+## [2.0.0](https://github.com/figuren-theater/code-quality/compare/1.2.2...2.0.0) - 2025-07-05
+
+- Update all deps ([#102](https://github.com/figuren-theater/code-quality/pull/102))
+
+### Dependency Updates & Maintenance
+
+- Bump dealerdirect/phpcodesniffer-composer-installer from 1.0.0 to 1.1.1 ([#101](https://github.com/figuren-theater/code-quality/pull/101))
+- Bump actions/setup-node from 4.3.0 to 4.4.0 ([#99](https://github.com/figuren-theater/code-quality/pull/99))
+- Bump ergebnis/composer-normalize from 2.45.0 to 2.47.0 ([#100](https://github.com/figuren-theater/code-quality/pull/100))
 
 ## [1.2.2](https://github.com/figuren-theater/code-quality/compare/1.2.1...1.2.2) - 2025-04-04
 
