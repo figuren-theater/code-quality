@@ -29,7 +29,7 @@
 	},
 	"require": {
 		"dealerdirect/phpcodesniffer-composer-installer": "1.1.1",
-		"ergebnis/composer-normalize": "2.47.0",
+		"ergebnis/composer-normalize": "2.49.0",
 		"figuren-theater/coding-standards": "*",
 		"figuren-theater/phpstan": "*",
 		"phpstan/extension-installer": "1.4.3"
