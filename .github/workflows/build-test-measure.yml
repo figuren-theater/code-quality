@@ -80,8 +80,8 @@ jobs:
       - name: Validate composer.json
         run: composer --no-interaction validate --no-check-all
 
-      # - name: Validate package.json
-        # run: ...
+      - name: Validate package.json
+        run: npm run lint:pkg-json
 
       # Dependency Review Action
       #
@@ -115,7 +115,7 @@ jobs:
         uses: actions/setup-node@v4.4.0
         with:
           # use the same version like WordPress/gutenberg
-          node-version: '16'
+          node-version: '22'
           cache: npm
 
       - name: Install Node dependencies
@@ -146,7 +146,7 @@ jobs:
         uses: actions/setup-node@v4.4.0
         with:
           # use the same version like WordPress/gutenberg
-          node-version: '16'
+          node-version: '22'
           cache: npm
 
       - name: Install Node dependencies
@@ -197,7 +197,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.1
+          php-version: 8.3
           coverage: none
           tools: cs2pr
 
@@ -236,7 +236,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           # phpstan requires PHP 7.1+.
-          php-version: 8.1
+          php-version: 8.3
           extensions: dom, iconv, json, libxml, zip
           coverage: none
           tools: cs2pr
@@ -304,3 +304,36 @@ jobs:
           vendor/bin/phpunit --version
           vendor/bin/phpunit --testdox
         continue-on-error: true
+
+  #-----------------------------------------------------------------------------------------------------------------------
+
+  testing-js:
+    name: 'Unit Testing: JS'
+    needs: pre-run
+    # only run for changed .php files AND when it is a pull_request
+    # because 'github.base_ref' will not be available on push
+    if: needs.pre-run.outputs.changed-js == 'true' && github.base_ref	!= null
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v4.4.0
+        with:
+          # use the same version like WordPress/gutenberg
+          node-version: '22'
+          cache: npm
+
+      - name: Install Node dependencies
+        run: npm ci
+        env:
+          CI: true
+
+      - name: Unit Testing JS
+        if: ${{ hashFiles('jest.config.js') != '' }}
+        run: npm run test:js
+        continue-on-error: true
+
+
+
