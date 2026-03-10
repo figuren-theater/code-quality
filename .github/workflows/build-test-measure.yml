@@ -80,7 +80,20 @@ jobs:
       - name: Validate composer.json
         run: composer --no-interaction validate --no-check-all
 
+      - name: Setup Node
+        uses: actions/setup-node@v4.4.0
+        with:
+          # use the same version like WordPress/gutenberg
+          node-version: '22'
+          cache: npm
+
+      - name: Install Node dependencies
+        run: npm ci
+        env:
+          CI: true
+
       - name: Validate package.json
+        if: ${{ hashFiles('package.json') != '' }}
         run: npm run lint:pkg-json
 
       # Dependency Review Action
