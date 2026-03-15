@@ -308,14 +308,24 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-composer-
 
+      - name: Setup Node
+        uses: actions/setup-node@v4.4.0
+        with:
+          # use the same version like WordPress/gutenberg
+          node-version: '22'
+          cache: npm
+
+      - name: Install Node dependencies
+        run: npm ci
+        env:
+          CI: true
+
       - name: Install Composer dependencies
         run: composer install
 
       - name: Unit Testing 
         if: ${{ hashFiles('phpunit.xml', 'phpunit.xml.dist') != '' }}
-        run: |
-          vendor/bin/phpunit --version
-          vendor/bin/phpunit --testdox
+        run: npm run test:php
         continue-on-error: true
 
   #-----------------------------------------------------------------------------------------------------------------------
