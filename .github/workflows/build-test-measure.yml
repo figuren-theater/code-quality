@@ -326,7 +326,6 @@ jobs:
       - name: Unit Testing 
         if: ${{ hashFiles('phpunit.xml', 'phpunit.xml.dist') != '' }}
         run: npm run test:php
-        continue-on-error: true
 
   #-----------------------------------------------------------------------------------------------------------------------
 
@@ -356,7 +355,6 @@ jobs:
       - name: Unit Testing JS
         if: ${{ hashFiles('jest.config.js') != '' }}
         run: npm run test:js
-        continue-on-error: true
 
 
 
